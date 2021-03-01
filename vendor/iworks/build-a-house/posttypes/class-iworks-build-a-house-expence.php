@@ -30,11 +30,11 @@ require_once( dirname( dirname( __FILE__ ) ) . '/posttypes.php' );
 
 class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_posttypes {
 
-	protected $post_type_name     = 'ibh_expence';
-	protected $taxonomy_name_club = 'iworks_build_a_house_club';
-	private $nonce_list           = 'iworks_build_a_house_expence_expences_list_nonce';
-	private $users_list           = array();
-	private $boats_list           = array();
+	protected $post_type_name          = 'ibh_expence';
+	protected $taxonomy_name_breakdown = 'iworks_build_a_house_breakdown';
+	private $nonce_list                = 'iworks_build_a_house_expence_expences_list_nonce';
+	private $users_list                = array();
+	private $boats_list                = array();
 
 	public function __construct() {
 		parent::__construct();
@@ -75,30 +75,29 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		 * fields
 		 */
 		$this->fields = array(
-			'expenceal' => array(
-				'nation'     => array(
-					'label' => __( 'Nation', 'build_a_house' ),
+			'details' => array(
+				'cost'       => array(
+					'type'  => 'Number',
+					'label' => __( 'Cost', 'build_a_house' ),
+				),
+				'contractor' => array(
 					'type'  => 'select2',
+					'label' => __( 'Contractor', 'kpir' ),
 					'args'  => array(
-						'options' => $this->get_nations(),
+						'data-source'       => 'contractor',
+						'data-nonce-action' => 'get-contractors-list',
 					),
 				),
-				'birth_date' => array(
+				'date_start' => array(
 					'type'  => 'date',
-					'label' => __( 'Birth Date', 'build_a_house' ),
+					'label' => __( 'Date Start', 'build_a_house' ),
 				),
-			),
-			'social'    => array(
-				'website'   => array( 'label' => __( 'Website', 'build_a_house' ) ),
-				'facebook'  => array( 'label' => __( 'Facebook', 'build_a_house' ) ),
-				'twitter'   => array( 'label' => __( 'Twitter', 'build_a_house' ) ),
-				'instagram' => array( 'label' => __( 'Instagram', 'build_a_house' ) ),
-				'endomondo' => array( 'label' => __( 'Endomondo', 'build_a_house' ) ),
-				'skype'     => array( 'label' => __( 'Skype', 'build_a_house' ) ),
-			),
-			'contact'   => array(
-				'mobile' => array( 'label' => __( 'Mobile', 'build_a_house' ) ),
-				'email'  => array( 'label' => __( 'E-mail', 'build_a_house' ) ),
+				'date_en'    => array(
+					'type'  => 'date',
+					'label' => __( 'Date End', 'build_a_house' ),
+				),
+				'mobile'     => array( 'label' => __( 'Mobile', 'build_a_house' ) ),
+				'email'      => array( 'label' => __( 'E-mail', 'build_a_house' ) ),
 			),
 		);
 		/**
@@ -111,10 +110,6 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			$key = sprintf( 'postbox_classes_%s_%s', $this->get_name(), $name );
 			add_filter( $key, array( $this, 'add_defult_class_to_postbox' ) );
 		}
-		/**
-		 * Change tag link to expence
-		 */
-		add_filter( 'term_link', array( $this, 'change_tag_link_to_expence_link' ), 10, 3 );
 	}
 
 	/**
@@ -159,11 +154,6 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			'label'                => __( 'Expence', 'build_a_house' ),
 			'labels'               => $labels,
 			'supports'             => array( 'title', 'editor', 'thumbnail', 'revision' ),
-			// 'taxonomies'           => array(
-				// $this->taxonomy_name_club,
-				// $this->taxonomy_name_location,
-			// ),
-			// 'hierarchical'         => false,
 			'public'               => true,
 			'show_ui'              => true,
 			'show_in_menu'         => $parent,
@@ -177,30 +167,30 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			'menu_icon'            => 'dashicons-admin-home',
 			'register_meta_box_cb' => array( $this, 'register_meta_boxes' ),
 		);
-		$args = apply_filters( 'build_a_house_register_expence_post_type_args', $args );
+		$args   = apply_filters( 'build_a_house_register_expence_post_type_args', $args );
 		register_post_type( $this->post_type_name, $args );
 		/**
-		 * expence hull club Taxonomy.
+		 * expence hull breakdown Taxonomy.
 		 */
 		$labels = array(
-			'name'                       => _x( 'Clubs', 'Club General Name', 'build_a_house' ),
-			'singular_name'              => _x( 'Club', 'Club Singular Name', 'build_a_house' ),
-			'menu_name'                  => __( 'Clubs', 'build_a_house' ),
-			'all_items'                  => __( 'Clubs', 'build_a_house' ),
-			'new_item_name'              => __( 'New Club Name', 'build_a_house' ),
-			'add_new_item'               => __( 'Add New Club', 'build_a_house' ),
-			'edit_item'                  => __( 'Edit Club', 'build_a_house' ),
-			'update_item'                => __( 'Update Club', 'build_a_house' ),
-			'view_item'                  => __( 'View Club', 'build_a_house' ),
+			'name'                       => _x( 'Breakdowns', 'Breakdown General Name', 'build_a_house' ),
+			'singular_name'              => _x( 'Breakdown', 'Breakdown Singular Name', 'build_a_house' ),
+			'menu_name'                  => __( 'Breakdowns', 'build_a_house' ),
+			'all_items'                  => __( 'Breakdowns', 'build_a_house' ),
+			'new_item_name'              => __( 'New Breakdown Name', 'build_a_house' ),
+			'add_new_item'               => __( 'Add New Breakdown', 'build_a_house' ),
+			'edit_item'                  => __( 'Edit Breakdown', 'build_a_house' ),
+			'update_item'                => __( 'Update Breakdown', 'build_a_house' ),
+			'view_item'                  => __( 'View Breakdown', 'build_a_house' ),
 			'separate_items_with_commas' => __( 'Separate items with commas', 'build_a_house' ),
 			'add_or_remove_items'        => __( 'Add or remove items', 'build_a_house' ),
 			'choose_from_most_used'      => __( 'Choose from the most used', 'build_a_house' ),
-			'popular_items'              => __( 'Popular Clubs', 'build_a_house' ),
-			'search_items'               => __( 'Search Clubs', 'build_a_house' ),
+			'popular_items'              => __( 'Popular Breakdowns', 'build_a_house' ),
+			'search_items'               => __( 'Search Breakdowns', 'build_a_house' ),
 			'not_found'                  => __( 'Not Found', 'build_a_house' ),
 			'no_terms'                   => __( 'No items', 'build_a_house' ),
-			'items_list'                 => __( 'Clubs list', 'build_a_house' ),
-			'items_list_navigation'      => __( 'Clubs list navigation', 'build_a_house' ),
+			'items_list'                 => __( 'Breakdowns list', 'build_a_house' ),
+			'items_list_navigation'      => __( 'Breakdowns list navigation', 'build_a_house' ),
 		);
 		$args   = array(
 			'labels'             => $labels,
@@ -212,10 +202,10 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'show_in_quick_edit' => true,
-			'rewrite'            => array( 'slug' => 'build_a_house-club' ),
+			'rewrite'            => array( 'slug' => 'build_a_house-breakdown' ),
 		);
 		$args   = apply_filters( 'build_a_house_register_expence_taxonomy_args', $args );
-		register_taxonomy( $this->taxonomy_name_club, array( $this->post_type_name ), $args );
+		register_taxonomy( $this->taxonomy_name_breakdown, array( $this->post_type_name ), $args );
 	}
 
 	public function save_post_meta( $post_id, $post, $update ) {
@@ -223,20 +213,10 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	}
 
 	public function register_meta_boxes( $post ) {
-		add_meta_box( 'expenceal', __( 'expenceal data', 'build_a_house' ), array( $this, 'expenceal' ), $this->post_type_name );
-		add_meta_box( 'social', __( 'Social Media', 'build_a_house' ), array( $this, 'social' ), $this->post_type_name );
-		add_meta_box( 'contact', __( 'Contact data', 'build_a_house' ), array( $this, 'contact' ), $this->post_type_name );
+		add_meta_box( 'expenceal', __( 'Detailed data', 'build_a_house' ), array( $this, 'details' ), $this->post_type_name );
 	}
 
-	public function contact( $post ) {
-		$this->get_meta_box_content( $post, $this->fields, __FUNCTION__ );
-	}
-
-	public function social( $post ) {
-		$this->get_meta_box_content( $post, $this->fields, __FUNCTION__ );
-	}
-
-	public function expenceal( $post ) {
+	public function details( $post ) {
 		$this->get_meta_box_content( $post, $this->fields, __FUNCTION__ );
 	}
 
@@ -251,6 +231,24 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	 */
 	public function custom_columns( $column, $post_id ) {
 		switch ( $column ) {
+			case 'contractor':
+				$id = get_post_meta( $post_id, $this->get_custom_field_basic_contractor_name(), true );
+				if ( empty( $id ) ) {
+					echo '-';
+				} else {
+					printf(
+						'<a href="%s">%s</a>',
+						add_query_arg(
+							array(
+								'contractor' => $id,
+								'post_type'  => 'iworks_kpir_invoice',
+							),
+							admin_url( 'edit.php' )
+						),
+						get_post_meta( $id, 'iworks_kpir_contractor_data_full_name', true )
+					);
+				}
+				break;
 			case 'email':
 				$meta_name = $this->options->get_option_name( 'contact_' . $column );
 				$email     = get_post_meta( $post_id, $meta_name, true );
@@ -271,8 +269,9 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	 */
 	public function add_columns( $columns ) {
 		unset( $columns['date'] );
-		$columns['title'] = __( 'Name', 'build_a_house' );
-		$columns['email'] = __( 'E-mail', 'build_a_house' );
+		$columns['title']      = __( 'Name', 'build-a-house' );
+		$columns['contractor'] = __( 'Contractor', 'build-a-house' );
+		$columns['cost']       = __( 'Cost', 'build-a-house' );
 		return $columns;
 	}
 

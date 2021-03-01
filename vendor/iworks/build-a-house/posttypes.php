@@ -31,9 +31,7 @@ class iworks_build_a_house_posttypes {
 	protected $options;
 	protected $fields;
 	protected $base;
-	protected $taxonomy_name_location  = 'iworks_build_a_house_location';
-	protected $show_single_person_flag = false;
-	protected $show_single_boat_flag   = false;
+	protected $taxonomy_name_location = 'iworks_build_a_house_location';
 
 	/**
 	 * Trophies Names
@@ -279,7 +277,7 @@ class iworks_build_a_house_posttypes {
 
 	protected function get_cache_key( $data, $prefix = '' ) {
 		$key = sprintf(
-			'dingy-%s-%s',
+			'ibm-%s-%s',
 			$prefix,
 			md5( serialize( $data ) )
 		);
@@ -320,14 +318,6 @@ class iworks_build_a_house_posttypes {
 			return;
 		}
 		$meta_key = null;
-		switch ( $query->get( 'post_type' ) ) {
-			case $this->options->get_option_name( 'boat' ):
-				$meta_key = $this->options->get_option_name( 'boat_nation' );
-				break;
-			case $this->options->get_option_name( 'person' ):
-				$meta_key = $this->options->get_option_name( 'personal_nation' );
-				break;
-		}
 		if ( empty( $meta_key ) ) {
 			return;
 		}

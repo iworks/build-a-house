@@ -43,9 +43,9 @@ class iworks_build_a_house extends iworks {
 		/**
 		 * post_types
 		 */
-		$post_types = array( 'expence' );
+		$post_types = array( 'expence', 'contractor' );
 		foreach ( $post_types as $post_type ) {
-			include_once $this->base . '/iworks/build-a-house/posttypes/' . $post_type . '.php';
+			include_once $this->base . '/iworks/build-a-house/posttypes/class-iworks-build-a-house-' . $post_type . '.php';
 			$class        = sprintf( 'iworks_build_a_house_posttypes_%s', $post_type );
 			$value        = sprintf( 'post_type_%s', $post_type );
 			$this->$value = new $class();

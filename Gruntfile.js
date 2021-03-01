@@ -24,11 +24,9 @@ module.exports = function( grunt ) {
 
 		// Concatenate those JS files into a single file (target: [source, source, ...]).
 		js_files_concat: {
-			'assets/scripts/admin/fleet.js': [
+			'assets/scripts/admin.js': [
 				'assets/scripts/admin/src/datepicker.js',
-				'assets/scripts/admin/src/boat.js',
-				'assets/scripts/admin/src/person.js',
-				'assets/scripts/admin/src/result.js',
+				'assets/scripts/admin/src/expence.js',
 				'assets/scripts/admin/src/select2.js'
 			]
 		},
@@ -41,10 +39,9 @@ module.exports = function( grunt ) {
 			'assets/styles/frontend/post-type-boat.css': 'assets/sass/frontend/post-type-boat.scss',
 		},
 		css_files_concat: {
-			'assets/styles/fleet-admin.css': [ 'assets/styles/admin/*.css' ],
-			'assets/styles/fleet.css': [ 'assets/styles/frontend/*.css' ]
+			'assets/styles/admin.css': [ 'assets/styles/admin/*.css' ],
+			'assets/styles/frontend.css': [ 'assets/styles/frontend/*.css' ]
 		},
-
 
 		// Regex patterns to exclude from transation.
 		translation: {
@@ -58,11 +55,11 @@ module.exports = function( grunt ) {
 				'tests/.*',		// Unit testing.
 			],
 			pot_dir: 'languages/', // With trailing slash.
-			textdomain: 'fleet',
+			textdomain: '<%= pkg.name %>',
 		},
 
-		dev_plugin_file: 'fleet.php',
-		dev_plugin_dir: 'fleet/',
+		dev_plugin_file: '<%= pkg.name %>.php',
+		dev_plugin_dir: '<%= pkg.name %>/',
 
 		// BUILD patterns to exclude code for specific builds.
 		replaces: {
@@ -164,8 +161,8 @@ module.exports = function( grunt ) {
 				files: [{
 					expand: true,
 					src: ['*.js', '!*.min.js'],
-					cwd: 'assets/scripts/admin/',
-					dest: 'assets/scripts/admin/',
+					cwd: 'assets/scripts/',
+					dest: 'assets/scripts/',
 					ext: '.min.js',
 					extDot: 'last'
 				}],
@@ -287,8 +284,8 @@ module.exports = function( grunt ) {
 
 			po2mo: {
 				files: {
-					src: conf.translation.pot_dir + 'fleet-pl_PL.po',
-					desc: conf.translation.pot_dir + 'fleet-pl_PL.mo'
+					src: conf.translation.pot_dir + '<%= pkg.name %>-pl_PL.po',
+					desc: conf.translation.pot_dir + '<%= pkg.name %>-pl_PL.mo'
                 }
 			}
 		},
@@ -365,8 +362,8 @@ module.exports = function( grunt ) {
 
 		po2mo: {
 			files: {
-				src: 'languages/fleet-pl_PL.po',
-				dest: 'languages/fleet-pl_PL.mo',
+				src: 'languages/<%= pkg.name %>-pl_PL.po',
+				dest: 'languages/<%= pkg.name %>-pl_PL.mo',
 			},
 		},
 

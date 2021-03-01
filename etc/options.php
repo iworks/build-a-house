@@ -4,7 +4,7 @@ function iworks_build_a_house_options() {
 	/**
 	 * main settings
 	 */
-	$parent                                = add_query_arg( 'post_type', 'iworks_build_a_house', 'edit.php' );
+	$parent                                = add_query_arg( 'post_type', 'ibh_expence', 'edit.php' );
 	$iworks_build_a_house_options['index'] = array(
 		'version'    => '0.0',
 		'use_tabs'   => true,
@@ -247,102 +247,7 @@ function iworks_build_a_house_options() {
 			),
 		),
 		//      'metaboxes' => array(),
-		'pages'      => array(
-			'new-boat' => array(
-				'menu'                 => 'submenu',
-				'parent'               => $parent,
-				'page_title'           => __( 'Add New Boat', 'build-a-house' ),
-				'menu_slug'            => htmlentities(
-					add_query_arg(
-						array(
-							'post_type' => 'iworks_build_a_house_boat',
-						),
-						'post-new.php'
-					)
-				),
-				'set_callback_to_null' => true,
-			),
-			'series'   => array(
-				'menu'                 => 'submenu',
-				'parent'               => $parent,
-				'page_title'           => __( 'Series', 'build-a-house' ),
-				'menu_title'           => __( 'Series', 'build-a-house' ),
-				'menu_slug'            => htmlentities(
-					add_query_arg(
-						array(
-							'taxonomy'  => 'iworks_build_a_house_serie',
-							'post_type' => 'iworks_build_a_house_person',
-						),
-						'edit-tags.php'
-					)
-				),
-				'set_callback_to_null' => true,
-			),
-			'hull'     => array(
-				'menu'                 => 'submenu',
-				'parent'               => $parent,
-				'page_title'           => __( 'Hulls Manufaturers', 'build-a-house' ),
-				'menu_title'           => __( 'Hulls Manufaturers', 'build-a-house' ),
-				'menu_slug'            => htmlentities(
-					add_query_arg(
-						array(
-							'taxonomy'  => 'iworks_build_a_house_boat_manufacturer',
-							'post_type' => 'iworks_build_a_house_person',
-						),
-						'edit-tags.php'
-					)
-				),
-				'set_callback_to_null' => true,
-			),
-			'sail'     => array(
-				'menu'                 => 'submenu',
-				'parent'               => $parent,
-				'page_title'           => __( 'Sails Manufaturers', 'build-a-house' ),
-				'menu_title'           => __( 'Sails Manufaturers', 'build-a-house' ),
-				'menu_slug'            => htmlentities(
-					add_query_arg(
-						array(
-							'taxonomy'  => 'iworks_build_a_house_sails_manufacturer',
-							'post_type' => 'iworks_build_a_house_person',
-						),
-						'edit-tags.php'
-					)
-				),
-				'set_callback_to_null' => true,
-			),
-			'mast'     => array(
-				'menu'                 => 'submenu',
-				'parent'               => $parent,
-				'page_title'           => __( 'Masts Manufaturers', 'build-a-house' ),
-				'menu_title'           => __( 'Masts Manufaturers', 'build-a-house' ),
-				'menu_slug'            => htmlentities(
-					add_query_arg(
-						array(
-							'taxonomy'  => 'iworks_build_a_house_mast_manufacturer',
-							'post_type' => 'iworks_build_a_house_person',
-						),
-						'edit-tags.php'
-					)
-				),
-				'set_callback_to_null' => true,
-			),
-			'location' => array(
-				'menu'                 => 'submenu',
-				'parent'               => $parent,
-				'page_title'           => __( 'Locations', 'build-a-house' ),
-				'menu_title'           => __( 'Locations', 'build-a-house' ),
-				'menu_slug'            => htmlentities(
-					add_query_arg(
-						array(
-							'taxonomy'  => 'iworks_build_a_house_location',
-							'post_type' => 'iworks_build_a_house_person',
-						),
-						'edit-tags.php'
-					)
-				),
-				'set_callback_to_null' => true,
-			),
-		),
+		'pages'      => array(),
 	);
 
 	return $iworks_build_a_house_options;
