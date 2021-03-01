@@ -395,5 +395,16 @@ class iworks_build_a_house_posttypes {
 		$data = preg_replace( '/[ \t\r\n]+/', ' ', $data );
 		return trim( $data );
 	}
+
+	/**
+	 * Get "basic_contractor" custom filed name.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string Custom Field meta_key.
+	 */
+	public function get_custom_field_basic_contractor_name() {
+		return $this->options->get_option_name( 'basic_contractor' );
+	}
 }
 

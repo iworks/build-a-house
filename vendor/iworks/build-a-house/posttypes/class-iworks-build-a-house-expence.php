@@ -64,13 +64,10 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		}
 		add_action( 'wp_ajax_iworks_build_a_house_expences_list', array( $this, 'get_select2_list' ) );
 		/**
-		 * add nonce
+		 * admin enqueue scripts
 		 */
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_filter( 'wp_localize_script_build_a_house_admin', array( $this, 'add_nonce' ) );
-		/**
-		 * maybe update country
-		 */
-		add_action( 'maybe_add_expence_nation', array( $this, 'maybe_add_expence_nation' ), 10, 2 );
 		/**
 		 * fields
 		 */
@@ -369,6 +366,16 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		return $content;
 	}
 
+	public function admin_enqueue_scripts( $hook ) {
+		if ( ! preg_match( '/^post(-new)?.php$/', $hook ) ) {
+			return;
+		}
+		$screen = get_current_screen();
+		if ( $this->post_type_name !== $screen->post_type ) {
+			return;
+		}
+		wp_enqueue_script( $this->options->get_option_name( 'admin' ) );
+	}
 
 }
 

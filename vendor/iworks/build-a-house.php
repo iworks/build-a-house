@@ -55,6 +55,7 @@ class iworks_build_a_house extends iworks {
 		 */
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_action( 'init', array( $this, 'db_install' ) );
+		add_action( 'init', array( $this, 'register_scripts' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		/**
@@ -107,6 +108,9 @@ class iworks_build_a_house extends iworks {
 		$file    = plugins_url( $file, $this->base );
 		wp_register_style( 'admin-build_a_house', $file, array( 'jquery-ui-datepicker', 'select2' ), $version );
 		wp_enqueue_style( 'admin-build_a_house' );
+	}
+
+	public function register_scripts() {
 		/**
 		 * select2
 		 */
@@ -115,9 +119,9 @@ class iworks_build_a_house extends iworks {
 		 * Admin scripts
 		 */
 		$files = array(
-			'build_a_house-admin' => sprintf( 'assets/scripts/admin/build_a_house%s.js', $this->dev ),
+			$this->options->get_option_name( 'admin' ) => sprintf( 'assets/scripts/admin%s.js', $this->dev ),
 		);
-		if ( '' == $this->dev ) {
+		if ( 0 && '' == $this->dev ) {
 			$files = array(
 				'build_a_house-admin-select2'    => 'assets/scripts/admin/src/select2.js',
 				'build_a_house-admin-datepicker' => 'assets/scripts/admin/src/datepicker.js',
@@ -137,7 +141,6 @@ class iworks_build_a_house extends iworks {
 				$this->get_version(),
 				true
 			);
-			wp_enqueue_script( $handle );
 		}
 		/**
 		 * JavaScript messages
@@ -150,18 +153,13 @@ class iworks_build_a_house extends iworks {
 			'user_id'  => get_current_user_id(),
 		);
 		wp_localize_script(
-			'build_a_house_admin',
+			$this->options->get_option_name( 'admin' ),
 			__CLASS__,
 			apply_filters( 'wp_localize_script_build_a_house_admin', $data )
 		);
 	}
 
 	public function init() {
-		if ( is_admin() ) {
-		} else {
-			$file = 'assets/styles/build_a_house' . $this->dev . '.css';
-			wp_enqueue_style( 'build_a_house', plugins_url( $file, $this->base ), array(), $this->get_version( $file ) );
-		}
 	}
 
 	/**
@@ -215,10 +213,53 @@ class iworks_build_a_house extends iworks {
 	public function register_styles() {
 		wp_register_style(
 			$this->options->get_option_name( 'frontend' ),
-			sprintf( plugins_url( '/assets/styles/build_a_house%s.css', $this->base ), $this->dev ? '' : '.min' ),
+			sprintf( plugins_url( '/assets/styles/frontend%s.css', $this->base ), $this->dev ? '' : '.min' ),
 			array(),
 			$this->version
 		);
+		/**
+		 * select2
+		 */
+		wp_register_script( 'select2', plugins_url( 'assets/externals/select2/js/select2.full.min.js', $this->base ), array(), '4.0.3' );
+		/**
+		 *
+		 */
+		/**
+		 * Admin scripts
+		 */
+		$files = array(
+			$this->options->get_option_name( 'admin' ) => sprintf( 'assets/scripts/admin%s.js', $this->dev ),
+		);
+		if ( 0 && '' == $this->dev ) {
+			$files = array(
+				'kpir-admin-datepicker' => 'assets/scripts/admin/src/datepicker.js',
+				'kpir-admin-invoice'    => 'assets/scripts/admin/src/invoice.js',
+				'kpir-admin-jpk'        => 'assets/scripts/admin/src/jpk.js',
+				'kpir-admin-select2'    => 'assets/scripts/admin/src/select2.js',
+			);
+		}
+		$deps = array(
+			'jquery-ui-datepicker',
+			'select2',
+		);
+		foreach ( $files as $handle => $file ) {
+			wp_register_script(
+				$handle,
+				plugins_url( $file, $this->base ),
+				$deps,
+				$this->get_version(),
+				true
+			);
+			l(
+				array(
+					$handle,
+					plugins_url( $file, $this->base ),
+					$deps,
+					$this->get_version(),
+					true,
+				)
+			);
+		}
 	}
 
 	/**
