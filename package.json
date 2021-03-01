@@ -3,10 +3,10 @@
     "title": "Build a Houser",
     "homepage": "https://iworks.pl/",
     "version": "0.0.1",
-    "description": "The sailboat manager makes it possible to manage boats, sailors, regattas and their results.",
+    "description": "",
     "repository": {
         "type": "git",
-        "url": "git@bitbucket.org:iworks-pl/fleet.git"
+        "url": "git@github.com:iworks/build-a-house.git"
     },
     "author": "iworks",
     "contributors": [
