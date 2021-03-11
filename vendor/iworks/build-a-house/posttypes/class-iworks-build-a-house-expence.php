@@ -50,13 +50,6 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		add_action( 'pre_get_posts', array( $this, 'apply_default_sort_order' ) );
 		add_action( 'pre_get_posts', array( $this, 'apply_countries_selector' ) );
 		/**
-		 * sort next/previous links by title
-		 */
-		add_filter( 'get_previous_post_sort', array( $this, 'adjacent_post_sort' ), 10, 3 );
-		add_filter( 'get_next_post_sort', array( $this, 'adjacent_post_sort' ), 10, 3 );
-		add_filter( 'get_previous_post_where', array( $this, 'adjacent_post_where' ), 10, 5 );
-		add_filter( 'get_next_post_where', array( $this, 'adjacent_post_where' ), 10, 5 );
-		/**
 		 * AJAX list
 		 */
 		if ( is_a( $this->options, 'iworks_options' ) ) {
@@ -89,7 +82,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 					'type'  => 'date',
 					'label' => __( 'Date Start', 'build_a_house' ),
 				),
-				'date_en'    => array(
+				'date_end'   => array(
 					'type'  => 'date',
 					'label' => __( 'Date End', 'build_a_house' ),
 				),
@@ -227,6 +220,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	 *
 	 */
 	public function custom_columns( $column, $post_id ) {
+		$value = get_post_meta( $post_id, $this->options->get_option_name( $column ), true );
 		switch ( $column ) {
 			case 'contractor':
 				$id = get_post_meta( $post_id, $this->get_custom_field_basic_contractor_name(), true );
@@ -246,13 +240,17 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 					);
 				}
 				break;
-			case 'email':
-				$meta_name = $this->options->get_option_name( 'contact_' . $column );
-				$email     = get_post_meta( $post_id, $meta_name, true );
-				if ( ! empty( $email ) ) {
-					printf( '<a href="mailto:%s">%s</a>', esc_attr( $email ), esc_html( $email ) );
+
+			case 'details_date_start':
+				if ( empty( $value ) ) {
+					echo '&ndash;';
+				} else {
+					echo date_i18n( get_option( 'date_format' ), $value );
 				}
 				break;
+
+			default:
+				echo get_post_meta( $post_id, $this->options->get_option_name( $column ), true );
 		}
 	}
 
@@ -266,9 +264,9 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	 */
 	public function add_columns( $columns ) {
 		unset( $columns['date'] );
-		$columns['title']      = __( 'Name', 'build-a-house' );
-		$columns['contractor'] = __( 'Contractor', 'build-a-house' );
-		$columns['cost']       = __( 'Cost', 'build-a-house' );
+		$columns['contractor']         = __( 'Contractor', 'build-a-house' );
+		$columns['details_cost']       = __( 'Cost', 'build-a-house' );
+		$columns['details_date_start'] = __( 'Date', 'build-a-house' );
 		return $columns;
 	}
 
