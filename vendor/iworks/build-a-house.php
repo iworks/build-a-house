@@ -103,11 +103,12 @@ class iworks_build_a_house extends iworks {
 		/**
 		 * Admin styles
 		 */
-		$file    = sprintf( '/assets/styles/build_a_house-admin%s.css', $this->dev );
+		$file    = sprintf( '/assets/styles/admin%s.css', $this->dev );
 		$version = $this->get_version( $file );
 		$file    = plugins_url( $file, $this->base );
-		wp_register_style( 'admin-build_a_house', $file, array( 'jquery-ui-datepicker', 'select2' ), $version );
-		wp_enqueue_style( 'admin-build_a_house' );
+
+		d( $file );
+		wp_register_style( $this->options->get_option_name( 'admin' ), $file, array( 'jquery-ui-datepicker', 'select2' ), $version );
 	}
 
 	public function register_scripts() {

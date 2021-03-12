@@ -33,14 +33,14 @@ module.exports = function( grunt ) {
 
 		// SASS files to process. Resulting CSS files will be minified as well.
 		css_files_compile: {
-			'assets/styles/admin/post-type-boat.css': 'assets/sass/admin/post-type-boat.scss',
-			'assets/styles/frontend/post-type-result.css': 'assets/sass/frontend/post-type-result.scss',
-			'assets/styles/frontend/post-type-person.css': 'assets/sass/frontend/post-type-person.scss',
-			'assets/styles/frontend/post-type-boat.css': 'assets/sass/frontend/post-type-boat.scss',
+			'assets/styles/admin/post-type-expence.css': 'assets/sass/admin/post-type-expence.scss',
+			// 'assets/styles/frontend/post-type-result.css': 'assets/sass/frontend/post-type-result.scss',
+			// 'assets/styles/frontend/post-type-person.css': 'assets/sass/frontend/post-type-person.scss',
+			// 'assets/styles/frontend/post-type-boat.css': 'assets/sass/frontend/post-type-boat.scss',
 		},
 		css_files_concat: {
 			'assets/styles/admin.css': [ 'assets/styles/admin/*.css' ],
-			'assets/styles/frontend.css': [ 'assets/styles/frontend/*.css' ]
+			// 'assets/styles/frontend.css': [ 'assets/styles/frontend/*.css' ]
 		},
 
 		// Regex patterns to exclude from transation.

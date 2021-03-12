@@ -53,7 +53,6 @@ class iworks_build_a_house_posttypes {
 		 */
 		add_action( 'init', array( $this, 'register' ) );
 		add_action( 'init', array( $this, 'register_taxonomy_location' ), 9 );
-		add_filter( 'body_class', array( $this, 'add_wide_body_class' ) );
 		/**
 		 * save post
 		 */
@@ -298,93 +297,6 @@ class iworks_build_a_house_posttypes {
 			$expiration = DAY_IN_SECONDS;
 		}
 		set_transient( $key, $data, $expiration );
-	}
-
-	public function apply_countries_selector( $query ) {
-		if ( is_admin() ) {
-			return;
-		}
-		if ( ! $query->is_main_query() ) {
-			return;
-		}
-		if ( ! $query->is_post_type_archive() ) {
-			return;
-		}
-		if ( $query->get( 'post_type' ) !== $this->post_type_name ) {
-			return;
-		}
-		$filter = $this->options->get_option( 'country' );
-		if ( empty( $filter ) ) {
-			return;
-		}
-		$meta_key = null;
-		if ( empty( $meta_key ) ) {
-			return;
-		}
-		$meta_query = array(
-			'relation' => 'OR',
-		);
-		foreach ( $filter as $value ) {
-			$meta_query[] = array(
-				'key'   => $meta_key,
-				'value' => $value,
-			);
-		}
-		$query->set( 'meta_query', $meta_query );
-	}
-
-	/**
-	 * Get nations list from config
-	 *
-	 * @since 1.3.0
-	 */
-	protected function get_nations() {
-		$data      = array();
-		$mna_codes = $this->options->get_group( 'mna_codes' );
-		if ( ! empty( $mna_codes ) ) {
-			foreach ( $mna_codes as $code ) {
-				if ( empty( $code['code'] ) ) {
-					continue;
-				}
-				$data[ $code['code'] ] = sprintf( '%s (%s)', $code['nation'], $code['code'] );
-			}
-			asort( $data );
-		}
-		return array_merge(
-			array(
-				'-' => __( 'select nation', 'build_a_house' ),
-			),
-			$data
-		);
-	}
-
-	/**
-	 * Get colors list from config
-	 *
-	 * @since 1.3.0
-	 */
-	protected function get_colors() {
-		$data = $this->options->get_group( 'colors' );
-		asort( $data );
-		return array_merge(
-			array(
-				'' => __( 'select color', 'build_a_house' ),
-			),
-			$data
-		);
-	}
-	/**
-	 * Add wide body class
-	 *
-	 * @since 1.3.0
-	 */
-	public function add_wide_body_class( $classes ) {
-		if ( $this->options->get_option( 'wide_class' ) ) {
-			if ( is_singular( $this->post_type_name ) ) {
-				$classes[] = 'template-full-width';
-			}
-		}
-		return $classes;
 	}
 
 	/**
