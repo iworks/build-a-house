@@ -79,7 +79,7 @@ class iworks_build_a_house_posttypes_contractor extends iworks_build_a_house_pos
 			),
 		);
 		$this->post_type_objects[ $this->get_name() ] = $this;
-		add_action( 'wp_ajax_iworks_get_contractors', array( $this, 'get_contractors_json' ) );
+		add_action( 'wp_ajax_iworks_build_a_house_details_contractor', array( $this, 'get_contractors_json' ) );
 		/**
 		 * change default columns
 		 */
