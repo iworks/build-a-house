@@ -106,8 +106,6 @@ class iworks_build_a_house extends iworks {
 		$file    = sprintf( '/assets/styles/admin%s.css', $this->dev );
 		$version = $this->get_version( $file );
 		$file    = plugins_url( $file, $this->base );
-
-		d( $file );
 		wp_register_style( $this->options->get_option_name( 'admin' ), $file, array( 'jquery-ui-datepicker', 'select2' ), $version );
 	}
 
@@ -250,15 +248,6 @@ class iworks_build_a_house extends iworks {
 				$deps,
 				$this->get_version(),
 				true
-			);
-			l(
-				array(
-					$handle,
-					plugins_url( $file, $this->base ),
-					$deps,
-					$this->get_version(),
-					true,
-				)
 			);
 		}
 	}
