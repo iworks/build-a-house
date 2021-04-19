@@ -1,4 +1,5 @@
 .iworks-build_a_house-row {
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: .5em;
 }

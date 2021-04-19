@@ -32,6 +32,12 @@ class iworks_build_a_house_posttypes {
 	protected $fields;
 	protected $base;
 	protected $taxonomy_name_location = 'iworks_build_a_house_location';
+	protected $root_url;
+
+	/**
+	 * Plugin version
+	 */
+	protected $version = 'PLUGIN_VERSION.BUILDTIME';
 
 	/**
 	 * Trophies Names
@@ -45,13 +51,15 @@ class iworks_build_a_house_posttypes {
 	protected $debug = false;
 
 	public function __construct() {
-		$this->options = iworks_build_a_house_get_options_object();
-		$this->base    = preg_replace( '/\/iworks.+/', '/', __FILE__ );
-		$this->debug   = defined( 'WP_DEBUG' ) && WP_DEBUG;
+		$this->options  = iworks_build_a_house_get_options_object();
+		$this->base     = dirname( dirname( dirname( dirname( __FILE__ ) ) ) );
+		$this->root_url = plugins_url( basename( $this->base ) );
+		$this->debug    = defined( 'WP_DEBUG' ) && WP_DEBUG;
 		/**
 		 * register
 		 */
 		add_action( 'init', array( $this, 'register' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_assets' ), 0 );
 		add_action( 'init', array( $this, 'register_taxonomy_location' ), 9 );
 		/**
 		 * save post
@@ -61,6 +69,22 @@ class iworks_build_a_house_posttypes {
 
 	public function get_name() {
 		return $this->post_type_name;
+	}
+
+	public function register_assets() {
+		/**
+		 * style
+		 */
+		wp_register_style(
+			$this->options->get_option_name( 'admin' ),
+			sprintf(
+				'%s/assets/styles/admin%s.css',
+				$this->root_url,
+				$this->debug ? '' : '.min'
+			),
+			array( 'select2' ),
+			$this->version
+		);
 	}
 
 	protected function get_meta_box_content( $post, $fields, $group ) {

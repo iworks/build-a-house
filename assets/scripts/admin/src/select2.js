@@ -1,6 +1,6 @@
 jQuery( document ).ready(function($) {
     window.console.log('start select2.js');
-    $('select.iworks-select2').select2();
+    // $('select.iworks-select2').select2();
     $(".iworks-build_a_house-row select.select2").select2({
         ajax: {
             url: ajaxurl,
