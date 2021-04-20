@@ -1,16 +1,24 @@
 === Build a House ===
 Contributors: iworks
 Donate link: http://iworks.pl/donate/build-a-house.php
-Tags: 
-Requires at least: 3.9
+Tags: construction, build, home, house, logger
+Requires at least: 5.0
 Tested up to: 5.7
 Stable tag: PLUGIN_VERSION
+Requires PHP: 7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Build a House.
+Build a House and document your expenses divided into steps. You can also log important events.
 
 == Description ==
+
+The plugin allows you to keep logs of expenses during the construction of the
+house, with the possibility of dividing into steps, e.g. obtaining a permit,
+planning, building foundations, floors, roof and similar. You can also keep a
+log of the most important events.
+
+Expense summaries available include monthly, eye and predefined step expenses.
 
 == Installation ==
 
@@ -38,7 +46,60 @@ There are 3 ways to install this plugin:
 
 == Frequently Asked Questions ==
 
+= What is a breakdown? =
+
+Breakdown is a step of building. Typical breakdowns are:
+
+* Sale Price Breakdown
+** Finished Lot Cost
+** Total Construction Cost
+** Financing Cost
+** Overhead and General Expenses
+** Marketing Cost
+** Sales Commission
+** Profit
+* Site Work
+** Building Permit Fee
+** Impact Fee
+** Water & Sewer Fees Inspections
+** Architecture. Engineering
+* Foundations
+** Foundation. Concrete. Retaining walls and Backfill
+* Framing
+** Framing (including roof)
+** Trusses
+** Sheathing
+** General Metal. Steel
+* Exterior Finishes
+** Exterior Wall Finish
+** Roofing
+** Windows and Doors
+* Major Systems Rough-ins
+** Plumbing
+** Electrical
+** HVAC
+* Interior Finishes
+** Insulation
+** Drywall
+** Interior Trims. Doors and Mirrors
+** Painting
+** Lighting
+** Cabinets. Countertops
+** Appliances
+** Flooring
+** Plumbing Fixtures
+** Fireplace
+* Final Steps
+** Landscaping
+** Outdoor Structures (deck patio, porches)
+** Driveway
+** Clean Up
+* Other
+
 == Screenshots ==
+
+1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is stored in the /assets directory.
+2. This is the second screen shot
 
 == Changelog ==
 
@@ -47,4 +108,6 @@ There are 3 ways to install this plugin:
 * First release.
 
 == Upgrade Notice ==
+
+There is no upgrade notice yet.
 
