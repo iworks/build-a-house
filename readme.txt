@@ -13,10 +13,7 @@ Build a House and document your expenses divided into steps. You can also log im
 
 == Description ==
 
-The plugin allows you to keep logs of expenses during the construction of the
-house, with the possibility of dividing into steps, e.g. obtaining a permit,
-planning, building foundations, floors, roof and similar. You can also keep a
-log of the most important events.
+The plugin allows you to keep logs of expenses during the construction of the house, with the possibility of dividing into steps, e.g. obtaining a permit, planning, building foundations, floors, roof and similar. You can also keep a log of the most important events.
 
 Expense summaries available include monthly, eye and predefined step expenses.
 
@@ -51,49 +48,49 @@ There are 3 ways to install this plugin:
 Breakdown is a step of building. Typical breakdowns are:
 
 * Sale Price Breakdown
-** Finished Lot Cost
-** Total Construction Cost
-** Financing Cost
-** Overhead and General Expenses
-** Marketing Cost
-** Sales Commission
-** Profit
++ Finished Lot Cost
++ Total Construction Cost
++ Financing Cost
++ Overhead and General Expenses
++ Marketing Cost
++ Sales Commission
++ Profit
 * Site Work
-** Building Permit Fee
-** Impact Fee
-** Water & Sewer Fees Inspections
-** Architecture. Engineering
++ Building Permit Fee
++ Impact Fee
++ Water & Sewer Fees Inspections
++ Architecture. Engineering
 * Foundations
-** Foundation. Concrete. Retaining walls and Backfill
++ Foundation. Concrete. Retaining walls and Backfill
 * Framing
-** Framing (including roof)
-** Trusses
-** Sheathing
-** General Metal. Steel
++ Framing (including roof)
++ Trusses
++ Sheathing
++ General Metal. Steel
 * Exterior Finishes
-** Exterior Wall Finish
-** Roofing
-** Windows and Doors
++ Exterior Wall Finish
++ Roofing
++ Windows and Doors
 * Major Systems Rough-ins
-** Plumbing
-** Electrical
-** HVAC
++ Plumbing
++ Electrical
++ HVAC
 * Interior Finishes
-** Insulation
-** Drywall
-** Interior Trims. Doors and Mirrors
-** Painting
-** Lighting
-** Cabinets. Countertops
-** Appliances
-** Flooring
-** Plumbing Fixtures
-** Fireplace
++ Insulation
++ Drywall
++ Interior Trims. Doors and Mirrors
++ Painting
++ Lighting
++ Cabinets. Countertops
++ Appliances
++ Flooring
++ Plumbing Fixtures
++ Fireplace
 * Final Steps
-** Landscaping
-** Outdoor Structures (deck patio, porches)
-** Driveway
-** Clean Up
++ Landscaping
++ Outdoor Structures (deck patio, porches)
++ Driveway
++ Clean Up
 * Other
 
 == Screenshots ==

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Build a House PLUGIN_VERSION\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build-a-house\n"
-"POT-Creation-Date: 2021-04-19 19:24:19+00:00\n"
+"POT-Creation-Date: 2021-04-21 10:26:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,136 +36,18 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: etc/options.php:22
-msgid "Add wide body class"
+#: etc/options.php:21 vendor/iworks/options/options.php:1615
+msgid "Street"
 msgstr ""
 
-#: etc/options.php:30
-msgid "Load frontend CSS"
+#: etc/options.php:25
+msgid "Zip code"
 msgstr ""
 
-#: etc/options.php:40
-msgid "Results"
-msgstr ""
-
-#: etc/options.php:45
-msgid "Show points"
-msgstr ""
-
-#: etc/options.php:53 etc/options.php:144 etc/options.php:235
-msgid "Show trophy"
-msgstr ""
-
-#: etc/options.php:61
-msgid "Show Country"
-msgstr ""
-
-#: etc/options.php:69 etc/options.php:152 etc/options.php:243
-msgid "Allow download CSV"
-msgstr ""
-
-#: etc/options.php:77
-msgid "Show English"
-msgstr ""
-
-#: etc/options.php:81
-msgid "Allow to show English title on a list."
-msgstr ""
-
-#: etc/options.php:88
-msgid "Persons"
-msgstr ""
-
-#: etc/options.php:93
-msgid "Show social media links"
-msgstr ""
-
-#: etc/options.php:101
-msgid "Show boats table"
-msgstr ""
-
-#: etc/options.php:109
-msgid "Show boat owned on person details page"
-msgstr ""
-
-#: etc/options.php:117
-msgid "Tag to person"
-msgstr ""
-
-#: etc/options.php:118
-msgid "Replace person tag by build_a_house person."
-msgstr ""
-
-#: etc/options.php:126
-msgid "Add posts list"
-msgstr ""
-
-#: etc/options.php:127
-msgid "Add posts list to person with matching tag."
-msgstr ""
-
-#: etc/options.php:135
-msgid "Show flag"
-msgstr ""
-
-#: etc/options.php:136
-msgid "Show country flag before person on single person page."
-msgstr ""
-
-#: etc/options.php:162
-msgid "Boats"
-msgstr ""
-
-#: etc/options.php:167
-msgid "Show boat flag"
-msgstr ""
-
-#: etc/options.php:169
-msgid "We recommend to turn off if we show sailors nationality."
-msgstr ""
-
-#: etc/options.php:176
-msgid "Add crew manually"
-msgstr ""
-
-#: etc/options.php:184
-msgid "Add extra data"
-msgstr ""
-
-#: etc/options.php:192
-msgid "Add boat social media"
-msgstr ""
-
-#: etc/options.php:200
-msgid "Add boat owners"
-msgstr ""
-
-#: etc/options.php:208
-msgid "Show boat owners on boat details page"
-msgstr ""
-
-#: etc/options.php:216
-msgid "Boat taxonomies"
-msgstr ""
-
-#: etc/options.php:218
-msgid "Sail manufacturer"
-msgstr ""
-
-#: etc/options.php:219
-msgid "Mast manufacturer"
-msgstr ""
-
-#: etc/options.php:220
-msgid "Hull manufacturer"
-msgstr ""
-
-#: etc/options.php:226
-msgid "Auto add feature image"
-msgstr ""
-
-#: etc/options.php:227
-msgid "Automagicaly add feature image, if there is some taged with boat number."
+#: etc/options.php:29
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:51
+#: vendor/iworks/options/options.php:1614
+msgid "City"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:39
@@ -182,11 +64,6 @@ msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:48
 msgid "ZIP Code:"
-msgstr ""
-
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:51
-#: vendor/iworks/options/options.php:1614
-msgid "City"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:54
@@ -680,10 +557,6 @@ msgstr ""
 
 #: vendor/iworks/options/options.php:808
 msgid "Save Changes"
-msgstr ""
-
-#: vendor/iworks/options/options.php:1615
-msgid "Street"
 msgstr ""
 
 #: vendor/iworks/options/options.php:1616

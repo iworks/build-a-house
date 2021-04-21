@@ -88,9 +88,6 @@ module.exports = function( grunt ) {
 					'!tests/**',
 					'!.git/**',
 					'!stylelint.config.js',
-					'!vendor',
-					'!vendor/*',
-					'!vendor/**'
 				],
 				dest: './release/<%= pkg.name %>/'
 			}

@@ -2,3 +2,5 @@ node_modules
 .sass-cache
 package-lock.json
 release
+languages/*.mo
+languages/*.po
