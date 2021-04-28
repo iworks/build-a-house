@@ -386,7 +386,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 				'attributes'      => array(
 					'kind' => array(
 						'type' => 'string',
-						'enum' => array( 'all', 'last-month', 'last-week' ),
+						'enum' => array( 'all', 'this-month', 'this-year', 'last-7-days' ),
 					),
 				),
 				'render_callback' => array( $this, 'render_callback_block_expences' ),
@@ -395,6 +395,12 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	}
 
 	public function render_callback_block_expences( $atts ) {
+		if ( is_admin() ) {
+			return;
+		}
+		if ( ! is_singular() ) {
+			return;
+		}
 		$attr = wp_parse_args(
 			$atts,
 			array(
@@ -402,19 +408,47 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			)
 		);
 		$args = array(
-			'post_type' => $this->post_type_name,
-			'nopaging'  => true,
-			'orderby'   => 'meta_value_num',
-			'order'     => 'DESC',
-			'meta'      => array(
+			'post_type'  => $this->post_type_name,
+			'nopaging'   => true,
+			'orderby'    => 'meta_value_num',
+			'order'      => 'DESC',
+			'meta_query' => array(
 				array(
-					'key'     => $this->options->get_option_name( 'date_start' ),
+					'key'     => $this->options->get_option_name( 'details_date_start' ),
 					'compare' => 'EXISTS',
 				),
 			),
 		);
 		switch ( $attr['kind'] ) {
+			case 'this-month':
+				$args['meta_query'] = array(
+					array(
+						'key'     => $this->options->get_option_name( 'details_date_start' ),
+						'compare' => '>=',
+						'value'   => strtotime( date( 'Y-m-01 00:00:00' ) ),
+					),
+				);
+				break;
+			case 'this-year':
+				$args['meta_query'] = array(
+					array(
+						'key'     => $this->options->get_option_name( 'details_date_start' ),
+						'compare' => '>=',
+						'value'   => strtotime( date( 'Y-01-01 00:00:00' ) ),
+					),
+				);
+				break;
+			case 'last-7-days':
+				$args['meta_query'] = array(
+					array(
+						'key'     => $this->options->get_option_name( 'details_date_start' ),
+						'compare' => '>=',
+						'value'   => strtotime( date( 'Y-m-d 00:00:00' ) ) - 7 * DAY_IN_SECONDS,
+					),
+				);
+				break;
 		}
+
 		$the_query = new WP_Query( $args );
 		if ( $the_query->have_posts() ) {
 			$this->load_template( 'build-a-house/block/expences', 'table-header' );

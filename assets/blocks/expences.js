@@ -53,12 +53,16 @@
                                                 label: __( 'All data', 'build-a-house' )
                                             },
                                             {
-                                                value: 'last-year',
-                                                label: __( 'Last year', 'build-a-house' )
+                                                value: 'this-year',
+                                                label: __( 'This year', 'build-a-house' )
                                             },
                                             {
-                                                value: 'last-month',
-                                                label: __( 'Last month', 'build-a-house' )
+                                                value: 'this-month',
+                                                label: __( 'This month', 'build-a-house' )
+                                            },
+                                            {
+                                                value: 'last-7-days',
+                                                label: __( 'Last 7 days', 'build-a-house' )
                                             },
                                         ],
                                         value: props.attributes.kind
