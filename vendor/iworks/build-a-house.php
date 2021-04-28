@@ -58,6 +58,7 @@ class iworks_build_a_house extends iworks {
 		add_action( 'init', array( $this, 'register_scripts' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'load_blocks' ) );
 		/**
 		 * iWorks Rate integration
 		 */
@@ -231,10 +232,10 @@ class iworks_build_a_house extends iworks {
 		);
 		if ( 0 && '' == $this->dev ) {
 			$files = array(
-				'kpir-admin-datepicker' => 'assets/scripts/admin/src/datepicker.js',
-				'kpir-admin-invoice'    => 'assets/scripts/admin/src/invoice.js',
-				'kpir-admin-jpk'        => 'assets/scripts/admin/src/jpk.js',
-				'kpir-admin-select2'    => 'assets/scripts/admin/src/select2.js',
+				'build-a-house-admin-datepicker' => 'assets/scripts/admin/src/datepicker.js',
+				'build-a-house-admin-invoice'    => 'assets/scripts/admin/src/invoice.js',
+				'build-a-house-admin-jpk'        => 'assets/scripts/admin/src/jpk.js',
+				'build-a-house-admin-select2'    => 'assets/scripts/admin/src/select2.js',
 			);
 		}
 		$deps = array(
@@ -263,6 +264,14 @@ class iworks_build_a_house extends iworks {
 		}
 	}
 
+	public function load_blocks() {
+		wp_enqueue_script(
+			'build-a-house-expences',
+			plugins_url( 'assets/blocks/expences.js', $this->base ),
+			array( 'wp-blocks', 'wp-editor' ),
+			true
+		);
+	}
 
 
 }
