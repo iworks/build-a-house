@@ -132,6 +132,10 @@ class iworks_build_a_house extends iworks {
 		$deps = array(
 			'jquery-ui-datepicker',
 			'select2',
+			'wp-block-editor',
+			'wp-blocks',
+			'wp-element',
+			'wp-i18n',
 		);
 		foreach ( $files as $handle => $file ) {
 			wp_register_script(

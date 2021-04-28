@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Build a House PLUGIN_VERSION\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build-a-house\n"
-"POT-Creation-Date: 2021-04-21 10:26:44+00:00\n"
+"POT-Creation-Date: 2021-04-28 09:05:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,28 +28,6 @@ msgstr ""
 msgid "build-a-house Manager"
 msgstr ""
 
-#: etc/options.php:11
-msgid "Configuration"
-msgstr ""
-
-#: etc/options.php:17
-msgid "General"
-msgstr ""
-
-#: etc/options.php:21 vendor/iworks/options/options.php:1615
-msgid "Street"
-msgstr ""
-
-#: etc/options.php:25
-msgid "Zip code"
-msgstr ""
-
-#: etc/options.php:29
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:51
-#: vendor/iworks/options/options.php:1614
-msgid "City"
-msgstr ""
-
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:39
 msgid "Full Name:"
 msgstr ""
@@ -64,6 +42,11 @@ msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:48
 msgid "ZIP Code:"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:51
+#: vendor/iworks/options/options.php:1614
+msgid "City"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:54
@@ -557,6 +540,10 @@ msgstr ""
 
 #: vendor/iworks/options/options.php:808
 msgid "Save Changes"
+msgstr ""
+
+#: vendor/iworks/options/options.php:1615
+msgid "Street"
 msgstr ""
 
 #: vendor/iworks/options/options.php:1616

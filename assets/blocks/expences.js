@@ -1,40 +1,98 @@
-/* This section of the code registers a new block, sets an icon and a category, and indicates what type of fields it'll include. */
+( function ( blocks, element ) {
+    var el = element.createElement;
+    var { __ } = window.wp.i18n;
+    var { SelectControl, Panel, PanelBody, PanelRow } = window.wp.components;
+    var { Fragment } = element;
+    var { InspectorControls } = window.wp.editor;
 
-wp.blocks.registerBlockType('build-a-house/expences', {
-    title: 'BaH: expences',
-    icon: 'money-alt',
-    category: 'common',
-    attributes: {
-        content: {type: 'string'},
-        color: {type: 'string'}
-    },
 
-    /* This configures how the content and color fields will work, and sets up the necessary elements */
-
-    edit: function(props) {
-        function updateContent(event) {
-            props.setAttributes({content: event.target.value})
+    var blockStyle = {
+        style: {
+            backgroundColor: '#900',
+            color: '#fff',
+            padding: '20px',
         }
-        function updateColor(value) {
-            props.setAttributes({color: value.hex})
+    };
+
+    blocks.registerBlockType('build-a-house/expences', {
+        title: __( 'Build a House: expences', 'build-a-house' ),
+        description: __('Show expences from selected period..', 'build-a-house' ),
+        icon: 'money-alt',
+        category: 'common',
+        attributes: {
+            kind: {
+                type: 'string',
+                default: 'all',
+            },
+        },
+        edit: (props) => {
+            return el(
+                Fragment, {},
+                    el( InspectorControls, {},
+                        el(
+                            PanelBody,
+                            {
+                                title: __( 'Expences Settings', 'build-a-house' ),
+                                initialOpen: true 
+                            },
+
+                            /* Text Field */
+                            el(
+                                PanelRow,
+                                {},
+                                el(
+                                    SelectControl,
+                                    {
+                                        label: __( 'Period:', 'build-a-house' ),
+                                        onChange: ( value ) => {
+                                            props.setAttributes( { kind: value } );
+                                        },
+                                        options: [
+                                            {
+                                                value: 'all',
+                                                label: __( 'All data', 'build-a-house' )
+                                            },
+                                            {
+                                                value: 'last-year',
+                                                label: __( 'Last year', 'build-a-house' )
+                                            },
+                                            {
+                                                value: 'last-month',
+                                                label: __( 'Last month', 'build-a-house' )
+                                            },
+                                        ],
+                                        value: props.attributes.kind
+                                    }
+                                )
+                            ),
+                        ),
+                    ),
+                    /*
+                     * Here will be your block markup
+                     */
+                    el(
+                        'div',
+                        blockStyle,
+                        el(
+                            'p',
+                            null,
+                            __( 'Configure block on sidebar.', 'build-a-house' ),
+                        ),
+                    ), 
+
+            )
+        },
+        save: function(props) {
+            return el(
+                'div',
+                {
+                    'data-kind': props.attributes.kind,
+                }
+            );
         }
-        return React.createElement(
-            "div",
-            null,
-            React.createElement(
-                "h3",
-                null,
-                "Simple Box"
-            ),
-            React.createElement("input", { type: "text", value: props.attributes.content, onChange: updateContent }),
-            React.createElement(wp.components.ColorPicker, { color: props.attributes.color, onChangeComplete: updateColor })
-        );
-    },
-    save: function(props) {
-        return wp.element.createElement(
-            "h3",
-            { style: { border: "3px solid " + props.attributes.color } },
-            props.attributes.content
-        );
-    }
-})
+    })
+} )( window.wp.blocks, window.wp.element );
+
+/*
+
+                    */
