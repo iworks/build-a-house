@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Build a House PLUGIN_VERSION\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build-a-house\n"
-"POT-Creation-Date: 2021-04-28 09:05:37+00:00\n"
+"POT-Creation-Date: 2021-04-28 17:52:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,6 +23,26 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: assets/template-parts/block/expences-table-header.php:4
+msgid "#"
+msgstr ""
+
+#: assets/template-parts/block/expences-table-header.php:5
+msgid "Title"
+msgstr ""
+
+#: assets/template-parts/block/expences-table-header.php:6
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:156
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:86
+msgid "Date Start"
+msgstr ""
+
+#: assets/template-parts/block/expences-table-header.php:7
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:74
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:271
+msgid "Cost"
+msgstr ""
 
 #: build-a-house.php:119
 msgid "build-a-house Manager"
@@ -100,8 +120,8 @@ msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:103
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:129
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:74
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:266
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:78
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:270
 msgid "Contractor"
 msgstr ""
 
@@ -152,37 +172,37 @@ msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:116
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:78
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:130
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:134
 msgid "Not found"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:117
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:79
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:131
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:135
 msgid "Not found in Trash"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:118
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:80
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:132
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:136
 msgid "Featured Image"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:119
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:81
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:133
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:137
 msgid "Set featured image"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:120
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:82
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:134
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:138
 msgid "Remove featured image"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:121
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:83
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:135
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:139
 msgid "Use as featured image"
 msgstr ""
 
@@ -300,165 +320,155 @@ msgstr ""
 msgid "Event Data"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:156
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:82
-msgid "Date Start"
-msgstr ""
-
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:157
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:86
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:90
 msgid "Date End"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:70
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:267
-msgid "Cost"
-msgstr ""
-
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:88
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:92
 msgid "Mobile"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:89
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:93
 msgid "E-mail"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:117
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:121
 msgid "Build a house"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:118
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:143
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:122
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:147
 msgid "Expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:119
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:121
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:123
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:125
 msgid "Expences"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:120
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:124
 msgid "Item Attributes"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:122
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:123
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:126
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:127
 msgid "Add New expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:124
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:128
 msgid "New expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:125
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:129
 msgid "Edit expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:126
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:130
 msgid "Update expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:127
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:131
 msgid "View expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:128
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:132
 msgid "View expences"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:129
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:133
 msgid "Search expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:136
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:140
 msgid "Insert into item"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:137
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:141
 msgid "Uploaded to this item"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:138
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:142
 msgid "Items list"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:139
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:143
 msgid "Items list navigation"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:140
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:144
 msgid "Filter items list"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:167
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:168
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:171
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:172
 msgid "Breakdowns"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:169
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:173
 msgid "New Breakdown Name"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:170
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:174
 msgid "Add New Breakdown"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:171
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:175
 msgid "Edit Breakdown"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:172
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:176
 msgid "Update Breakdown"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:173
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:177
 msgid "View Breakdown"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:174
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:178
 msgid "Separate items with commas"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:175
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:179
 msgid "Add or remove items"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:176
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:180
 #: vendor/iworks/build-a-house/posttypes.php:277
 msgid "Choose from the most used"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:177
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:181
 msgid "Popular Breakdowns"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:178
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:182
 msgid "Search Breakdowns"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:179
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:183
 #: vendor/iworks/build-a-house/posttypes.php:280
 msgid "Not Found"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:180
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:184
 #: vendor/iworks/build-a-house/posttypes.php:281
 msgid "No items"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:181
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:185
 msgid "Breakdowns list"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:182
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:186
 msgid "Breakdowns list navigation"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:205
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:209
 msgid "Detailed data"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:268
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:272
 msgid "Date"
 msgstr ""
 
@@ -514,15 +524,15 @@ msgstr ""
 msgid "Locations list navigation"
 msgstr ""
 
-#: vendor/iworks/build-a-house.php:79
+#: vendor/iworks/build-a-house.php:80
 msgid "build_a_house do not have such post type!"
 msgstr ""
 
-#: vendor/iworks/build-a-house.php:170
+#: vendor/iworks/build-a-house.php:175
 msgid "Settings"
 msgstr ""
 
-#: vendor/iworks/build-a-house.php:172
+#: vendor/iworks/build-a-house.php:177
 msgid "Donate"
 msgstr ""
 
@@ -626,27 +636,27 @@ msgctxt "Event Singular Name"
 msgid "Event"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:115
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:119
 msgctxt "expence General Name"
 msgid "Expences"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:116
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:120
 msgctxt "expence Singular Name"
 msgid "Expence"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:152
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:156
 msgctxt "slug for archive"
 msgid "build_a_house_expences"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:165
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:169
 msgctxt "Breakdown General Name"
 msgid "Breakdowns"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:166
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:170
 msgctxt "Breakdown Singular Name"
 msgid "Breakdown"
 msgstr ""

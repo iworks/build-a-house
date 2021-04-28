@@ -342,5 +342,19 @@ class iworks_build_a_house_posttypes {
 	public function get_custom_field_basic_contractor_name() {
 		return $this->options->get_option_name( 'basic_contractor' );
 	}
+
+	protected function load_template( $slug, $name = null, $args = array() ) {
+		$template = get_template_part( $slug, $name );
+		if ( false === $template ) {
+			$file = sprintf(
+				'%s/assets/template-parts/%s%s%s.php',
+				$this->base,
+				preg_replace( '/build-a-house\//', '', $slug ),
+				empty( $name ) ? '' : '-',
+				empty( $name ) ? '' : $name
+			);
+			load_template( $file, false, $args );
+		}
+	}
 }
 

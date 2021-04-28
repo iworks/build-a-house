@@ -59,11 +59,11 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		 * admin enqueue scripts
 		 */
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ), 117 );
-        add_filter( 'wp_localize_script_build_a_house_admin', array( $this, 'add_nonce' ) );
-        /**
-         * block
-         */
-        add_action( 'init', array( $this, 'register_block_types' ) );
+		add_filter( 'wp_localize_script_build_a_house_admin', array( $this, 'add_nonce' ) );
+		/**
+		 * block
+		 */
+		add_action( 'init', array( $this, 'register_block_types' ) );
 		/**
 		 * fields
 		 */
@@ -377,31 +377,65 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		}
 		wp_enqueue_script( $this->options->get_option_name( 'admin' ) );
 		wp_enqueue_style( $this->options->get_option_name( 'admin' ) );
-    }
+	}
 
-    public function register_block_types() {
-        register_block_type(
-            'build-a-house/expences',
-            array(
-                'attributes' => array(
-                    'kind' => array(
-                        'type' => 'string',
-                        'enum' => array( 'all', 'last-month', 'last-week' ),
-                    ),
-                ),
-                'render_callback' => array( $this, 'render_callback_block_expences'),
-            )
-        );
-    }
+	public function register_block_types() {
+		register_block_type(
+			'build-a-house/expences',
+			array(
+				'attributes'      => array(
+					'kind' => array(
+						'type' => 'string',
+						'enum' => array( 'all', 'last-month', 'last-week' ),
+					),
+				),
+				'render_callback' => array( $this, 'render_callback_block_expences' ),
+			)
+		);
+	}
 
-    public function render_callback_block_expences( $atts ) {
-        $attr = wp_parse_args(
-            $atts,
-            array(
-                'kind' => 'all',
-            )
-        );
-    }
+	public function render_callback_block_expences( $atts ) {
+		$attr = wp_parse_args(
+			$atts,
+			array(
+				'kind' => 'all',
+			)
+		);
+		$args = array(
+			'post_type' => $this->post_type_name,
+			'nopaging'  => true,
+			'orderby'   => 'meta_value_num',
+			'order'     => 'DESC',
+			'meta'      => array(
+				array(
+					'key'     => $this->options->get_option_name( 'date_start' ),
+					'compare' => 'EXISTS',
+				),
+			),
+		);
+		switch ( $attr['kind'] ) {
+		}
+		$the_query = new WP_Query( $args );
+		if ( $the_query->have_posts() ) {
+			$this->load_template( 'build-a-house/block/expences', 'table-header' );
+			$i           = 1;
+			$sum         = 0;
+			$date_format = get_option( 'date_format' );
+			while ( $the_query->have_posts() ) {
+				$the_query->the_post();
+				$data = array(
+					'i'          => $i++,
+					'cost'       => intval( get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_cost' ), true ) ),
+					'date_start' => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_start' ), true ) ),
+					'date_end'   => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_end' ), true ) ),
+				);
+				$sum += $data['cost'];
+				$this->load_template( 'build-a-house/block/expences', 'table-body-row', $data );
+			}
+			$this->load_template( 'build-a-house/block/expences', 'table-footer', array( 'sum' => $sum ) );
+		}
+		wp_reset_postdata();
+	}
 
 }
 
