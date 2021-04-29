@@ -36,46 +36,46 @@ class iworks_build_a_house_posttypes_contractor extends iworks_build_a_house_pos
 		$this->fields                                 = array(
 			'contractor_data' => array(
 				'full_name'    => array(
-					'label' => __( 'Full Name:', 'build_a_house' ),
+					'label' => __( 'Full Name:', 'build-a-house' ),
 				),
 				'street1'      => array(
-					'label' => __( 'Street Address 1:', 'build_a_house' ),
+					'label' => __( 'Street Address 1:', 'build-a-house' ),
 				),
 				'street2'      => array(
-					'label' => __( 'Street Address 2:', 'build_a_house' ),
+					'label' => __( 'Street Address 2:', 'build-a-house' ),
 				),
 				'zip'          => array(
-					'label' => __( 'ZIP Code:', 'build_a_house' ),
+					'label' => __( 'ZIP Code:', 'build-a-house' ),
 				),
 				'city'         => array(
-					'label' => __( 'City', 'build_a_house' ),
+					'label' => __( 'City', 'build-a-house' ),
 				),
 				'country'      => array(
-					'label' => __( 'Country', 'build_a_house' ),
+					'label' => __( 'Country', 'build-a-house' ),
 				),
 				'nip'          => array(
-					'label' => __( 'NIP', 'build_a_house' ),
+					'label' => __( 'NIP', 'build-a-house' ),
 				),
 				'regon'        => array(
-					'label' => __( 'REGON', 'build_a_house' ),
+					'label' => __( 'REGON', 'build-a-house' ),
 				),
 				'krs'          => array(
-					'label' => __( 'KRS', 'build_a_house' ),
+					'label' => __( 'KRS', 'build-a-house' ),
 				),
 				'bank'         => array(
-					'label' => __( 'Bank', 'build_a_house' ),
+					'label' => __( 'Bank', 'build-a-house' ),
 				),
 				'bank_account' => array(
-					'label' => __( 'Bank account', 'build_a_house' ),
+					'label' => __( 'Bank account', 'build-a-house' ),
 				),
 			),
 			'contact'         => array(
-				'website' => array( 'label' => __( 'Website', 'build_a_house' ) ),
-				'email'   => array( 'label' => __( 'email', 'build_a_house' ) ),
-				'mobile'  => array( 'label' => __( 'mobile', 'build_a_house' ) ),
-				'phone'   => array( 'label' => __( 'phone', 'build_a_house' ) ),
-				'website' => array( 'label' => __( 'Website', 'build_a_house' ) ),
-				'website' => array( 'label' => __( 'Website', 'build_a_house' ) ),
+				'website' => array( 'label' => __( 'Website', 'build-a-house' ) ),
+				'email'   => array( 'label' => __( 'email', 'build-a-house' ) ),
+				'mobile'  => array( 'label' => __( 'mobile', 'build-a-house' ) ),
+				'phone'   => array( 'label' => __( 'phone', 'build-a-house' ) ),
+				'website' => array( 'label' => __( 'Website', 'build-a-house' ) ),
+				'website' => array( 'label' => __( 'Website', 'build-a-house' ) ),
 			),
 		);
 		$this->post_type_objects[ $this->get_name() ] = $this;
@@ -97,37 +97,37 @@ class iworks_build_a_house_posttypes_contractor extends iworks_build_a_house_pos
 
 	public function register() {
 		$labels = array(
-			'name'                  => _x( 'Contractors', 'Contractor General Name', 'build_a_house' ),
-			'singular_name'         => _x( 'Contractor', 'Contractor Singular Name', 'build_a_house' ),
-			'menu_name'             => __( 'Contractors', 'build_a_house' ),
-			'name_admin_bar'        => __( 'Contractor', 'build_a_house' ),
-			'archives'              => __( 'Contractor Archives', 'build_a_house' ),
-			'attributes'            => __( 'Contractor Attributes', 'build_a_house' ),
-			'parent_item_colon'     => __( 'Parent Contractor:', 'build_a_house' ),
-			'all_items'             => __( 'Contractors', 'build_a_house' ),
-			'add_new_item'          => __( 'Add New Contractor', 'build_a_house' ),
-			'add_new'               => __( 'Add New', 'build_a_house' ),
-			'new_item'              => __( 'New Contractor', 'build_a_house' ),
-			'edit_item'             => __( 'Edit Contractor', 'build_a_house' ),
-			'update_item'           => __( 'Update Contractor', 'build_a_house' ),
-			'view_item'             => __( 'View Contractor', 'build_a_house' ),
-			'view_items'            => __( 'View Contractors', 'build_a_house' ),
-			'search_items'          => __( 'Search Contractor', 'build_a_house' ),
-			'not_found'             => __( 'Not found', 'build_a_house' ),
-			'not_found_in_trash'    => __( 'Not found in Trash', 'build_a_house' ),
-			'featured_image'        => __( 'Featured Image', 'build_a_house' ),
-			'set_featured_image'    => __( 'Set featured image', 'build_a_house' ),
-			'remove_featured_image' => __( 'Remove featured image', 'build_a_house' ),
-			'use_featured_image'    => __( 'Use as featured image', 'build_a_house' ),
-			'insert_into_item'      => __( 'Insert into contractor', 'build_a_house' ),
-			'uploaded_to_this_item' => __( 'Uploaded to this contractor', 'build_a_house' ),
-			'items_list'            => __( 'Contractors list', 'build_a_house' ),
-			'items_list_navigation' => __( 'Contractors list navigation', 'build_a_house' ),
-			'filter_items_list'     => __( 'Filter contractors list', 'build_a_house' ),
+			'name'                  => _x( 'Contractors', 'Contractor General Name', 'build-a-house' ),
+			'singular_name'         => _x( 'Contractor', 'Contractor Singular Name', 'build-a-house' ),
+			'menu_name'             => __( 'Contractors', 'build-a-house' ),
+			'name_admin_bar'        => __( 'Contractor', 'build-a-house' ),
+			'archives'              => __( 'Contractor Archives', 'build-a-house' ),
+			'attributes'            => __( 'Contractor Attributes', 'build-a-house' ),
+			'parent_item_colon'     => __( 'Parent Contractor:', 'build-a-house' ),
+			'all_items'             => __( 'Contractors', 'build-a-house' ),
+			'add_new_item'          => __( 'Add New Contractor', 'build-a-house' ),
+			'add_new'               => __( 'Add New', 'build-a-house' ),
+			'new_item'              => __( 'New Contractor', 'build-a-house' ),
+			'edit_item'             => __( 'Edit Contractor', 'build-a-house' ),
+			'update_item'           => __( 'Update Contractor', 'build-a-house' ),
+			'view_item'             => __( 'View Contractor', 'build-a-house' ),
+			'view_items'            => __( 'View Contractors', 'build-a-house' ),
+			'search_items'          => __( 'Search Contractor', 'build-a-house' ),
+			'not_found'             => __( 'Not found', 'build-a-house' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'build-a-house' ),
+			'featured_image'        => __( 'Featured Image', 'build-a-house' ),
+			'set_featured_image'    => __( 'Set featured image', 'build-a-house' ),
+			'remove_featured_image' => __( 'Remove featured image', 'build-a-house' ),
+			'use_featured_image'    => __( 'Use as featured image', 'build-a-house' ),
+			'insert_into_item'      => __( 'Insert into contractor', 'build-a-house' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this contractor', 'build-a-house' ),
+			'items_list'            => __( 'Contractors list', 'build-a-house' ),
+			'items_list_navigation' => __( 'Contractors list navigation', 'build-a-house' ),
+			'filter_items_list'     => __( 'Filter contractors list', 'build-a-house' ),
 		);
 		$args   = array(
-			'label'                => __( 'Contractor', 'build_a_house' ),
-			'description'          => __( 'Contractor Description', 'build_a_house' ),
+			'label'                => __( 'Contractor', 'build-a-house' ),
+			'description'          => __( 'Contractor Description', 'build-a-house' ),
 			'labels'               => $labels,
 			'supports'             => array( 'title', 'thumbnail' ),
 			'taxonomies'           => array(),
@@ -149,8 +149,8 @@ class iworks_build_a_house_posttypes_contractor extends iworks_build_a_house_pos
 	}
 
 	public function register_meta_boxes( $post ) {
-		add_meta_box( 'contractor-data', __( 'Contractor Data', 'build_a_house' ), array( $this, 'contractor_data' ), $this->post_type_name );
-		add_meta_box( 'contact-data', __( 'Contact Data', 'build_a_house' ), array( $this, 'contact' ), $this->post_type_name );
+		add_meta_box( 'contractor-data', __( 'Contractor Data', 'build-a-house' ), array( $this, 'contractor_data' ), $this->post_type_name );
+		add_meta_box( 'contact-data', __( 'Contact Data', 'build-a-house' ), array( $this, 'contact' ), $this->post_type_name );
 	}
 
 	public function contractor_data( $post ) {
@@ -234,8 +234,8 @@ class iworks_build_a_house_posttypes_contractor extends iworks_build_a_house_pos
 	 */
 	public function add_columns( $columns ) {
 		unset( $columns['date'] );
-		$columns['full_name'] = __( 'Full Name', 'build_a_house' );
-		$columns['nip']       = __( 'NIP', 'build_a_house' );
+		$columns['full_name'] = __( 'Full Name', 'build-a-house' );
+		$columns['nip']       = __( 'NIP', 'build-a-house' );
 		return $columns;
 	}
 
@@ -292,7 +292,7 @@ class iworks_build_a_house_posttypes_contractor extends iworks_build_a_house_pos
 		}
 		$id = isset( $_REQUEST['contractor'] ) ? $_REQUEST['contractor'] : 0;
 		echo '<select name="contractor">';
-		printf( '<option value="">%s</option>', esc_html__( 'All contractors', 'build_a_house' ) );
+		printf( '<option value="">%s</option>', esc_html__( 'All contractors', 'build-a-house' ) );
 		foreach ( $data['items'] as $one ) {
 			printf(
 				'<option value="%s" %s>%s</option>',

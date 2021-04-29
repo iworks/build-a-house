@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Build a House PLUGIN_VERSION\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build-a-house\n"
-"POT-Creation-Date: 2021-04-29 10:03:55+00:00\n"
+"POT-Creation-Date: 2021-04-29 15:36:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,99 +41,95 @@ msgid "Financing Cost"
 msgstr ""
 
 #: assets/import/breakdowns.php:9
-msgid "Overhead and General Expenses"
-msgstr ""
-
-#: assets/import/breakdowns.php:10
-msgid "Marketing Cost"
+msgid "General Expenses"
 msgstr ""
 
 #: assets/import/breakdowns.php:11
-msgid "Sales Commission"
-msgstr ""
-
-#: assets/import/breakdowns.php:12
-msgid "Profit"
-msgstr ""
-
-#: assets/import/breakdowns.php:14
 msgid "Site Work"
 msgstr ""
 
-#: assets/import/breakdowns.php:15
+#: assets/import/breakdowns.php:12
 msgid "Building Permit Fee"
 msgstr ""
 
-#: assets/import/breakdowns.php:16
+#: assets/import/breakdowns.php:13
 msgid "Impact Fee"
 msgstr ""
 
-#: assets/import/breakdowns.php:17
+#: assets/import/breakdowns.php:14
 msgid "Water & Sewer Fees Inspections"
 msgstr ""
 
-#: assets/import/breakdowns.php:18
+#: assets/import/breakdowns.php:15
 msgid "Architecture"
 msgstr ""
 
-#: assets/import/breakdowns.php:19
+#: assets/import/breakdowns.php:16
 msgid "Engineering"
 msgstr ""
 
-#: assets/import/breakdowns.php:21
+#: assets/import/breakdowns.php:18
 msgid "Foundations"
 msgstr ""
 
-#: assets/import/breakdowns.php:22
+#: assets/import/breakdowns.php:19
 msgid "Foundation"
 msgstr ""
 
-#: assets/import/breakdowns.php:23
+#: assets/import/breakdowns.php:20
 msgid "Concrete"
 msgstr ""
 
-#: assets/import/breakdowns.php:24
-msgid "Retaining walls and Backfill"
+#: assets/import/breakdowns.php:21
+msgid "Retaining walls"
 msgstr ""
 
-#: assets/import/breakdowns.php:26
+#: assets/import/breakdowns.php:22
+msgid "Backfill"
+msgstr ""
+
+#: assets/import/breakdowns.php:24 assets/import/breakdowns.php:25
 msgid "Framing"
 msgstr ""
 
-#: assets/import/breakdowns.php:27
-msgid "Framing (including roof)"
+#: assets/import/breakdowns.php:26
+msgid "Roof"
 msgstr ""
 
-#: assets/import/breakdowns.php:28
+#: assets/import/breakdowns.php:27
 msgid "Trusses"
 msgstr ""
 
-#: assets/import/breakdowns.php:29
+#: assets/import/breakdowns.php:28
 msgid "Sheathing"
 msgstr ""
 
-#: assets/import/breakdowns.php:30
+#: assets/import/breakdowns.php:29
 msgid "Steel"
 msgstr ""
 
-#: assets/import/breakdowns.php:32
+#: assets/import/breakdowns.php:31
 msgid "Exterior Finishes"
 msgstr ""
 
-#: assets/import/breakdowns.php:33
+#: assets/import/breakdowns.php:32
 msgid "Exterior Wall Finish"
 msgstr ""
 
-#: assets/import/breakdowns.php:34
+#: assets/import/breakdowns.php:33
 msgid "Roofing"
 msgstr ""
 
+#: assets/import/breakdowns.php:34
+msgid "Windows"
+msgstr ""
+
 #: assets/import/breakdowns.php:35
-msgid "Windows and Doors"
+msgid "Doors"
 msgstr ""
 
 #: assets/import/breakdowns.php:37
-msgid "Major Systems Rough-ins"
+msgid "Major Systems"
 msgstr ""
 
 #: assets/import/breakdowns.php:38
@@ -148,75 +144,95 @@ msgstr ""
 msgid "HVAC"
 msgstr ""
 
-#: assets/import/breakdowns.php:42
-msgid "Interior Finishes"
+#: assets/import/breakdowns.php:41
+msgid "Alarm"
 msgstr ""
 
-#: assets/import/breakdowns.php:43
-msgid "Insulation"
+#: assets/import/breakdowns.php:42
+msgid "Smart Home"
 msgstr ""
 
 #: assets/import/breakdowns.php:44
-msgid "Drywall"
+msgid "Interior Finishes"
 msgstr ""
 
 #: assets/import/breakdowns.php:45
-msgid "Interior Trims"
+msgid "Insulation"
 msgstr ""
 
 #: assets/import/breakdowns.php:46
-msgid "Doors and Mirrors"
+msgid "Drywall"
 msgstr ""
 
 #: assets/import/breakdowns.php:47
-msgid "Painting"
+msgid "Interior Trims"
 msgstr ""
 
 #: assets/import/breakdowns.php:48
-msgid "Lighting"
+msgid "Internal Doors"
 msgstr ""
 
 #: assets/import/breakdowns.php:49
-msgid "Cabinets Countertops"
+msgid "Mirrors"
 msgstr ""
 
 #: assets/import/breakdowns.php:50
-msgid "Appliances"
+msgid "Painting"
 msgstr ""
 
 #: assets/import/breakdowns.php:51
-msgid "Flooring"
+msgid "Lighting"
 msgstr ""
 
 #: assets/import/breakdowns.php:52
-msgid "Plumbing Fixtures"
+msgid "Cabinets"
 msgstr ""
 
 #: assets/import/breakdowns.php:53
-msgid "Fireplace"
+msgid "Countertops"
+msgstr ""
+
+#: assets/import/breakdowns.php:54
+msgid "Appliances"
 msgstr ""
 
 #: assets/import/breakdowns.php:55
-msgid "Final Steps"
+msgid "Flooring"
 msgstr ""
 
 #: assets/import/breakdowns.php:56
-msgid "Landscaping"
+msgid "Plumbing Fixtures"
 msgstr ""
 
 #: assets/import/breakdowns.php:57
-msgid "Outdoor Structures (deck patio, porches)"
-msgstr ""
-
-#: assets/import/breakdowns.php:58
-msgid "Driveway"
+msgid "Fireplace"
 msgstr ""
 
 #: assets/import/breakdowns.php:59
-msgid "Clean Up"
+msgid "Final Steps"
+msgstr ""
+
+#: assets/import/breakdowns.php:60
+msgid "Landscaping"
 msgstr ""
 
 #: assets/import/breakdowns.php:61
+msgid "Watering"
+msgstr ""
+
+#: assets/import/breakdowns.php:62
+msgid "Outdoor Structures (deck patio, porches)"
+msgstr ""
+
+#: assets/import/breakdowns.php:63
+msgid "Driveway"
+msgstr ""
+
+#: assets/import/breakdowns.php:64
+msgid "Clean Up"
+msgstr ""
+
+#: assets/import/breakdowns.php:66
 msgid "Other"
 msgstr ""
 
@@ -240,8 +256,8 @@ msgstr ""
 msgid "Cost"
 msgstr ""
 
-#: build-a-house.php:119
-msgid "build-a-house Manager"
+#. Plugin Name of the plugin/theme
+msgid "Build a House"
 msgstr ""
 
 #: etc/options.php:11
@@ -746,7 +762,7 @@ msgid "Locations list navigation"
 msgstr ""
 
 #: vendor/iworks/build-a-house.php:81
-msgid "build_a_house do not have such post type!"
+msgid "Build a House do not have such post type!"
 msgstr ""
 
 #: vendor/iworks/build-a-house.php:122
@@ -817,16 +833,12 @@ msgstr ""
 msgid "No thanks"
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-msgid "Build a House"
-msgstr ""
-
 #. Plugin URI of the plugin/theme
 msgid "http://iworks.pl/build-a-house/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Build a house allows to log expences and event during contruction."
+msgid "Build a House allows to log expenses and events during construction."
 msgstr ""
 
 #. Author of the plugin/theme

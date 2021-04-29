@@ -83,7 +83,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			'details' => array(
 				'cost'       => array(
 					'type'  => 'Number',
-					'label' => __( 'Cost', 'build_a_house' ),
+					'label' => __( 'Cost', 'build-a-house' ),
 				),
 				'contractor' => array(
 					'type'  => 'select2',
@@ -95,14 +95,14 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 				),
 				'date_start' => array(
 					'type'  => 'date',
-					'label' => __( 'Date Start', 'build_a_house' ),
+					'label' => __( 'Date Start', 'build-a-house' ),
 				),
 				'date_end'   => array(
 					'type'  => 'date',
-					'label' => __( 'Date End', 'build_a_house' ),
+					'label' => __( 'Date End', 'build-a-house' ),
 				),
-				'mobile'     => array( 'label' => __( 'Mobile', 'build_a_house' ) ),
-				'email'      => array( 'label' => __( 'E-mail', 'build_a_house' ) ),
+				'mobile'     => array( 'label' => __( 'Mobile', 'build-a-house' ) ),
+				'email'      => array( 'label' => __( 'E-mail', 'build-a-house' ) ),
 			),
 		);
 		/**
@@ -128,35 +128,35 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	public function register() {
 		$parent = true;
 		$labels = array(
-			'name'                  => _x( 'Expences', 'expence General Name', 'build_a_house' ),
-			'singular_name'         => _x( 'Expence', 'expence Singular Name', 'build_a_house' ),
-			'menu_name'             => __( 'Build a house', 'build_a_house' ),
-			'name_admin_bar'        => __( 'Expence', 'build_a_house' ),
-			'archives'              => __( 'Expences', 'build_a_house' ),
-			'attributes'            => __( 'Item Attributes', 'build_a_house' ),
-			'all_items'             => __( 'Expences', 'build_a_house' ),
-			'add_new_item'          => __( 'Add New expence', 'build_a_house' ),
-			'add_new'               => __( 'Add New expence', 'build_a_house' ),
-			'new_item'              => __( 'New expence', 'build_a_house' ),
-			'edit_item'             => __( 'Edit expence', 'build_a_house' ),
-			'update_item'           => __( 'Update expence', 'build_a_house' ),
-			'view_item'             => __( 'View expence', 'build_a_house' ),
-			'view_items'            => __( 'View expences', 'build_a_house' ),
-			'search_items'          => __( 'Search expence', 'build_a_house' ),
-			'not_found'             => __( 'Not found', 'build_a_house' ),
-			'not_found_in_trash'    => __( 'Not found in Trash', 'build_a_house' ),
-			'featured_image'        => __( 'Featured Image', 'build_a_house' ),
-			'set_featured_image'    => __( 'Set featured image', 'build_a_house' ),
-			'remove_featured_image' => __( 'Remove featured image', 'build_a_house' ),
-			'use_featured_image'    => __( 'Use as featured image', 'build_a_house' ),
-			'insert_into_item'      => __( 'Insert into item', 'build_a_house' ),
-			'uploaded_to_this_item' => __( 'Uploaded to this item', 'build_a_house' ),
-			'items_list'            => __( 'Items list', 'build_a_house' ),
-			'items_list_navigation' => __( 'Items list navigation', 'build_a_house' ),
-			'filter_items_list'     => __( 'Filter items list', 'build_a_house' ),
+			'name'                  => _x( 'Expences', 'expence General Name', 'build-a-house' ),
+			'singular_name'         => _x( 'Expence', 'expence Singular Name', 'build-a-house' ),
+			'menu_name'             => __( 'Build a house', 'build-a-house' ),
+			'name_admin_bar'        => __( 'Expence', 'build-a-house' ),
+			'archives'              => __( 'Expences', 'build-a-house' ),
+			'attributes'            => __( 'Item Attributes', 'build-a-house' ),
+			'all_items'             => __( 'Expences', 'build-a-house' ),
+			'add_new_item'          => __( 'Add New expence', 'build-a-house' ),
+			'add_new'               => __( 'Add New expence', 'build-a-house' ),
+			'new_item'              => __( 'New expence', 'build-a-house' ),
+			'edit_item'             => __( 'Edit expence', 'build-a-house' ),
+			'update_item'           => __( 'Update expence', 'build-a-house' ),
+			'view_item'             => __( 'View expence', 'build-a-house' ),
+			'view_items'            => __( 'View expences', 'build-a-house' ),
+			'search_items'          => __( 'Search expence', 'build-a-house' ),
+			'not_found'             => __( 'Not found', 'build-a-house' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'build-a-house' ),
+			'featured_image'        => __( 'Featured Image', 'build-a-house' ),
+			'set_featured_image'    => __( 'Set featured image', 'build-a-house' ),
+			'remove_featured_image' => __( 'Remove featured image', 'build-a-house' ),
+			'use_featured_image'    => __( 'Use as featured image', 'build-a-house' ),
+			'insert_into_item'      => __( 'Insert into item', 'build-a-house' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this item', 'build-a-house' ),
+			'items_list'            => __( 'Items list', 'build-a-house' ),
+			'items_list_navigation' => __( 'Items list navigation', 'build-a-house' ),
+			'filter_items_list'     => __( 'Filter items list', 'build-a-house' ),
 		);
 		$args   = array(
-			'label'                => __( 'Expence', 'build_a_house' ),
+			'label'                => __( 'Expence', 'build-a-house' ),
 			'labels'               => $labels,
 			'supports'             => array( 'title', 'editor', 'thumbnail', 'revision' ),
 			'public'               => true,
@@ -165,7 +165,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			'show_in_admin_bar'    => true,
 			'show_in_nav_menus'    => true,
 			'can_export'           => true,
-			'has_archive'          => _x( 'build_a_house_expences', 'slug for archive', 'build_a_house' ),
+			'has_archive'          => _x( 'build_a_house_expences', 'slug for archive', 'build-a-house' ),
 			'exclude_from_search'  => false,
 			'publicly_queryable'   => true,
 			'capability_type'      => 'page',
@@ -178,24 +178,24 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		 * expence hull breakdown Taxonomy.
 		 */
 		$labels = array(
-			'name'                       => _x( 'Breakdowns', 'Breakdown General Name', 'build_a_house' ),
-			'singular_name'              => _x( 'Breakdown', 'Breakdown Singular Name', 'build_a_house' ),
-			'menu_name'                  => __( 'Breakdowns', 'build_a_house' ),
-			'all_items'                  => __( 'Breakdowns', 'build_a_house' ),
-			'new_item_name'              => __( 'New Breakdown Name', 'build_a_house' ),
-			'add_new_item'               => __( 'Add New Breakdown', 'build_a_house' ),
-			'edit_item'                  => __( 'Edit Breakdown', 'build_a_house' ),
-			'update_item'                => __( 'Update Breakdown', 'build_a_house' ),
-			'view_item'                  => __( 'View Breakdown', 'build_a_house' ),
-			'separate_items_with_commas' => __( 'Separate items with commas', 'build_a_house' ),
-			'add_or_remove_items'        => __( 'Add or remove items', 'build_a_house' ),
-			'choose_from_most_used'      => __( 'Choose from the most used', 'build_a_house' ),
-			'popular_items'              => __( 'Popular Breakdowns', 'build_a_house' ),
-			'search_items'               => __( 'Search Breakdowns', 'build_a_house' ),
-			'not_found'                  => __( 'Not Found', 'build_a_house' ),
-			'no_terms'                   => __( 'No items', 'build_a_house' ),
-			'items_list'                 => __( 'Breakdowns list', 'build_a_house' ),
-			'items_list_navigation'      => __( 'Breakdowns list navigation', 'build_a_house' ),
+			'name'                       => _x( 'Breakdowns', 'Breakdown General Name', 'build-a-house' ),
+			'singular_name'              => _x( 'Breakdown', 'Breakdown Singular Name', 'build-a-house' ),
+			'menu_name'                  => __( 'Breakdowns', 'build-a-house' ),
+			'all_items'                  => __( 'Breakdowns', 'build-a-house' ),
+			'new_item_name'              => __( 'New Breakdown Name', 'build-a-house' ),
+			'add_new_item'               => __( 'Add New Breakdown', 'build-a-house' ),
+			'edit_item'                  => __( 'Edit Breakdown', 'build-a-house' ),
+			'update_item'                => __( 'Update Breakdown', 'build-a-house' ),
+			'view_item'                  => __( 'View Breakdown', 'build-a-house' ),
+			'separate_items_with_commas' => __( 'Separate items with commas', 'build-a-house' ),
+			'add_or_remove_items'        => __( 'Add or remove items', 'build-a-house' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'build-a-house' ),
+			'popular_items'              => __( 'Popular Breakdowns', 'build-a-house' ),
+			'search_items'               => __( 'Search Breakdowns', 'build-a-house' ),
+			'not_found'                  => __( 'Not Found', 'build-a-house' ),
+			'no_terms'                   => __( 'No items', 'build-a-house' ),
+			'items_list'                 => __( 'Breakdowns list', 'build-a-house' ),
+			'items_list_navigation'      => __( 'Breakdowns list navigation', 'build-a-house' ),
 		);
 		$args   = array(
 			'labels'             => $labels,
@@ -218,7 +218,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	}
 
 	public function register_meta_boxes( $post ) {
-		add_meta_box( 'expenceal', __( 'Detailed data', 'build_a_house' ), array( $this, 'details' ), $this->post_type_name );
+		add_meta_box( 'expenceal', __( 'Detailed data', 'build-a-house' ), array( $this, 'details' ), $this->post_type_name );
 	}
 
 	public function details( $post ) {

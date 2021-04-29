@@ -78,7 +78,7 @@ class iworks_build_a_house extends iworks {
 		if ( isset( $this->$value ) ) {
 			return $this->$value->get_name();
 		}
-		return new WP_Error( 'broke', __( 'build_a_house do not have such post type!', 'build-a-house' ) );
+		return new WP_Error( 'broke', __( 'Build a House do not have such post type!', 'build-a-house' ) );
 	}
 
 	public function admin_register() {
@@ -115,7 +115,7 @@ class iworks_build_a_house extends iworks {
 		wp_enqueue_script( $handler );
 		wp_localize_script(
 			$handler,
-			'build_a_house',
+			'build-a-house',
 			array(
 				'ajaxurl'  => admin_url( 'admin-ajax.php' ),
 				'messages' => array(

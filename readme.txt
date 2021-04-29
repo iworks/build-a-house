@@ -101,6 +101,10 @@ Breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
+= 1.0.1 (2021-04-28) =
+* Fixed translations.
+* Improved breakdowns import list.
+
 = 1.0.0 (2021-04-28) =
 * Added block `build-a-house/expences` to editor.
 * Updated iWorks Options to 2.6.9

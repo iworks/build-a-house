@@ -37,11 +37,11 @@ class iworks_build_a_house_posttypes_event extends iworks_build_a_house_posttype
 			'event_data' => array(
 				'date_start' => array(
 					'type'  => 'date',
-					'label' => __( 'Date start', 'build_a_house' ),
+					'label' => __( 'Date start', 'build-a-house' ),
 				),
 				'date_end'   => array(
 					'type'  => 'date',
-					'label' => __( 'Date start', 'build_a_house' ),
+					'label' => __( 'Date start', 'build-a-house' ),
 				),
 			),
 		);
@@ -59,37 +59,37 @@ class iworks_build_a_house_posttypes_event extends iworks_build_a_house_posttype
 
 	public function register() {
 		$labels = array(
-			'name'                  => _x( 'Events', 'Event General Name', 'build_a_house' ),
-			'singular_name'         => _x( 'Event', 'Event Singular Name', 'build_a_house' ),
-			'menu_name'             => __( 'Events', 'build_a_house' ),
-			'name_admin_bar'        => __( 'Event', 'build_a_house' ),
-			'archives'              => __( 'Event Archives', 'build_a_house' ),
-			'attributes'            => __( 'Event Attributes', 'build_a_house' ),
-			'parent_item_colon'     => __( 'Parent Event:', 'build_a_house' ),
-			'all_items'             => __( 'Events', 'build_a_house' ),
-			'add_new_item'          => __( 'Add New Event', 'build_a_house' ),
-			'add_new'               => __( 'Add New', 'build_a_house' ),
-			'new_item'              => __( 'New Event', 'build_a_house' ),
-			'edit_item'             => __( 'Edit Event', 'build_a_house' ),
-			'update_item'           => __( 'Update Event', 'build_a_house' ),
-			'view_item'             => __( 'View Event', 'build_a_house' ),
-			'view_items'            => __( 'View Events', 'build_a_house' ),
-			'search_items'          => __( 'Search Event', 'build_a_house' ),
-			'not_found'             => __( 'Not found', 'build_a_house' ),
-			'not_found_in_trash'    => __( 'Not found in Trash', 'build_a_house' ),
-			'featured_image'        => __( 'Featured Image', 'build_a_house' ),
-			'set_featured_image'    => __( 'Set featured image', 'build_a_house' ),
-			'remove_featured_image' => __( 'Remove featured image', 'build_a_house' ),
-			'use_featured_image'    => __( 'Use as featured image', 'build_a_house' ),
-			'insert_into_item'      => __( 'Insert into contractor', 'build_a_house' ),
-			'uploaded_to_this_item' => __( 'Uploaded to this contractor', 'build_a_house' ),
-			'items_list'            => __( 'Events list', 'build_a_house' ),
-			'items_list_navigation' => __( 'Events list navigation', 'build_a_house' ),
-			'filter_items_list'     => __( 'Filter contractors list', 'build_a_house' ),
+			'name'                  => _x( 'Events', 'Event General Name', 'build-a-house' ),
+			'singular_name'         => _x( 'Event', 'Event Singular Name', 'build-a-house' ),
+			'menu_name'             => __( 'Events', 'build-a-house' ),
+			'name_admin_bar'        => __( 'Event', 'build-a-house' ),
+			'archives'              => __( 'Event Archives', 'build-a-house' ),
+			'attributes'            => __( 'Event Attributes', 'build-a-house' ),
+			'parent_item_colon'     => __( 'Parent Event:', 'build-a-house' ),
+			'all_items'             => __( 'Events', 'build-a-house' ),
+			'add_new_item'          => __( 'Add New Event', 'build-a-house' ),
+			'add_new'               => __( 'Add New', 'build-a-house' ),
+			'new_item'              => __( 'New Event', 'build-a-house' ),
+			'edit_item'             => __( 'Edit Event', 'build-a-house' ),
+			'update_item'           => __( 'Update Event', 'build-a-house' ),
+			'view_item'             => __( 'View Event', 'build-a-house' ),
+			'view_items'            => __( 'View Events', 'build-a-house' ),
+			'search_items'          => __( 'Search Event', 'build-a-house' ),
+			'not_found'             => __( 'Not found', 'build-a-house' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'build-a-house' ),
+			'featured_image'        => __( 'Featured Image', 'build-a-house' ),
+			'set_featured_image'    => __( 'Set featured image', 'build-a-house' ),
+			'remove_featured_image' => __( 'Remove featured image', 'build-a-house' ),
+			'use_featured_image'    => __( 'Use as featured image', 'build-a-house' ),
+			'insert_into_item'      => __( 'Insert into contractor', 'build-a-house' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this contractor', 'build-a-house' ),
+			'items_list'            => __( 'Events list', 'build-a-house' ),
+			'items_list_navigation' => __( 'Events list navigation', 'build-a-house' ),
+			'filter_items_list'     => __( 'Filter contractors list', 'build-a-house' ),
 		);
 		$args   = array(
-			'label'                => __( 'Event', 'build_a_house' ),
-			'description'          => __( 'Event Description', 'build_a_house' ),
+			'label'                => __( 'Event', 'build-a-house' ),
+			'description'          => __( 'Event Description', 'build-a-house' ),
 			'labels'               => $labels,
 			'supports'             => array( 'title', 'thumbnail', 'editor' ),
 			'taxonomies'           => array(),
@@ -111,7 +111,7 @@ class iworks_build_a_house_posttypes_event extends iworks_build_a_house_posttype
 	}
 
 	public function register_meta_boxes( $post ) {
-		add_meta_box( 'event-data', __( 'Event Data', 'build_a_house' ), array( $this, 'event_data' ), $this->post_type_name );
+		add_meta_box( 'event-data', __( 'Event Data', 'build-a-house' ), array( $this, 'event_data' ), $this->post_type_name );
 	}
 
 	public function event_data( $post ) {
@@ -153,8 +153,8 @@ class iworks_build_a_house_posttypes_event extends iworks_build_a_house_posttype
 	 */
 	public function add_columns( $columns ) {
 		unset( $columns['date'] );
-		$columns['date_start'] = __( 'Date Start', 'build_a_house' );
-		$columns['date_end']   = __( 'Date End', 'build_a_house' );
+		$columns['date_start'] = __( 'Date Start', 'build-a-house' );
+		$columns['date_end']   = __( 'Date End', 'build-a-house' );
 		return $columns;
 	}
 
