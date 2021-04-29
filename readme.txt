@@ -13,9 +13,9 @@ Build a House and document your expenses divided into steps. You can also log im
 
 == Description ==
 
-The plugin allows you to keep logs of expenses during the construction of the house, with the possibility of dividing into steps, e.g. obtaining a permit, planning, building foundations, floors, roof and similar. You can also keep a log of the most important events.
+The plugin allows you to keep logs of expenses during the construction of the house, with the possibility of dividing them into steps, e.g.  obtaining a permit, planning, building foundations, floors, roof, and similar. You can also keep a log of the most important events.
 
-Expense summaries available include monthly, eye and predefined step expenses.
+Expense summaries available include monthly, date and predefined step expenses.
 
 == Installation ==
 
@@ -53,15 +53,15 @@ Breakdown is a step of building. Typical breakdowns are:
 + Financing Cost
 + Overhead and General Expenses
 + Marketing Cost
-+ Sales Commission
-+ Profit
 * Site Work
 + Building Permit Fee
 + Impact Fee
 + Water & Sewer Fees Inspections
-+ Architecture. Engineering
-* Foundations
-+ Foundation. Concrete. Retaining walls and Backfill
++ Architecture
++ Engineering
++ Foundation
++ Concrete
++ Retaining walls and Backfill
 * Framing
 + Framing (including roof)
 + Trusses
@@ -70,18 +70,22 @@ Breakdown is a step of building. Typical breakdowns are:
 * Exterior Finishes
 + Exterior Wall Finish
 + Roofing
-+ Windows and Doors
-* Major Systems Rough-ins
++ Windows
++ Doors
+* Major Systems
 + Plumbing
 + Electrical
 + HVAC
 * Interior Finishes
 + Insulation
 + Drywall
-+ Interior Trims. Doors and Mirrors
++ Interior Trims
++ Doors
++ Mirrors
 + Painting
 + Lighting
-+ Cabinets. Countertops
++ Cabinets
++ Countertops
 + Appliances
 + Flooring
 + Plumbing Fixtures
@@ -94,9 +98,6 @@ Breakdown is a step of building. Typical breakdowns are:
 * Other
 
 == Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is stored in the /assets directory.
-2. This is the second screen shot
 
 == Changelog ==
 

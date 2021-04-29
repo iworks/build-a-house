@@ -3,7 +3,7 @@
 Plugin Name: Build a House
 Text Domain: build-a-house
 Plugin URI: http://iworks.pl/build-a-house/
-Description: Build a house allows to log expences and event during contruction.
+Description: Build a House allows to log expenses and events during construction.
 Version: PLUGIN_VERSION
 Author: Marcin Pietrzak
 Author URI: http://iworks.pl/
@@ -116,6 +116,6 @@ include_once dirname( __FILE__ ) . '/vendor/iworks/rate/rate.php';
 do_action(
 	'iworks-register-plugin',
 	plugin_basename( __FILE__ ),
-	__( 'build-a-house Manager', 'build-a-house' ),
+	__( 'Build a House', 'build-a-house' ),
 	'build-a-house'
 );
