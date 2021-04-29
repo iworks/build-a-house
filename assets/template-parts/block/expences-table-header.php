@@ -1,4 +1,4 @@
-<table>
+<table class="build-a-house-expences">
 	<thead>
 		<tr>
 			<th><?php esc_html_e( '#', 'build-a-house' ); ?></th>

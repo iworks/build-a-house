@@ -380,6 +380,10 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	}
 
 	public function register_block_types() {
+		if ( ! function_exists( 'register_block_type' ) ) {
+			// Block editor is not available.
+			return;
+		}
 		register_block_type(
 			'build-a-house/expences',
 			array(
@@ -390,6 +394,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 					),
 				),
 				'render_callback' => array( $this, 'render_callback_block_expences' ),
+				'style'           => $this->options->get_option_name( 'blocks-expences' ),
 			)
 		);
 	}
@@ -448,7 +453,6 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 				);
 				break;
 		}
-
 		$the_query = new WP_Query( $args );
 		if ( $the_query->have_posts() ) {
 			$this->load_template( 'build-a-house/block/expences', 'table-header' );

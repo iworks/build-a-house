@@ -161,6 +161,13 @@ class iworks_build_a_house extends iworks {
 			__CLASS__,
 			apply_filters( 'wp_localize_script_build_a_house_admin', $data )
 		);
+		/**
+		 * blocks: expences
+		 */
+		$file    = sprintf( 'assets/styles/frontend/blocks/expences%s.css', $this->dev );
+		$version = $this->get_version( $file );
+		$file    = plugins_url( $file, $this->base );
+		wp_register_style( $this->options->get_option_name( 'blocks-expences' ), $file, array(), $version );
 	}
 
 	public function init() {

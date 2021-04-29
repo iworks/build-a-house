@@ -101,6 +101,7 @@ Breakdown is a step of building. Typical breakdowns are:
 == Changelog ==
 
 = 1.0.0 (2021-xx-xx) =
+* Added block `build-a-house/expences` to editor.
 
 * First release.
 
