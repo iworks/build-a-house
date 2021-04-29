@@ -56,7 +56,7 @@ class iworks_build_a_house extends iworks {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_action( 'init', array( $this, 'db_install' ) );
 		add_action( 'init', array( $this, 'register_scripts' ), 0 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ), 0 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'load_blocks' ) );
 		/**
@@ -68,7 +68,8 @@ class iworks_build_a_house extends iworks {
 
 	public function admin_init() {
 		iworks_build_a_house_options_init();
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_register' ), 0 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue' ) );
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 	}
 
@@ -77,18 +78,10 @@ class iworks_build_a_house extends iworks {
 		if ( isset( $this->$value ) ) {
 			return $this->$value->get_name();
 		}
-		return new WP_Error( 'broke', __( 'build_a_house do not have such post type!', 'build_a_house' ) );
+		return new WP_Error( 'broke', __( 'build_a_house do not have such post type!', 'build-a-house' ) );
 	}
 
-	public function admin_enqueue_scripts() {
-		$screen = get_current_screen();
-		/**
-		 * off on not build_a_house pages
-		 */
-		$re = sprintf( '/%s_/', __CLASS__ );
-		if ( ! preg_match( $re, $screen->id ) ) {
-			return;
-		}
+	public function admin_register() {
 		/**
 		 * datepicker
 		 */
@@ -108,6 +101,28 @@ class iworks_build_a_house extends iworks {
 		$version = $this->get_version( $file );
 		$file    = plugins_url( $file, $this->base );
 		wp_register_style( $this->options->get_option_name( 'admin' ), $file, array( 'jquery-ui-datepicker', 'select2' ), $version );
+	}
+
+	public function admin_enqueue() {
+		$screen = get_current_screen();
+		/**
+		 * off on not build_a_house pages
+		 */
+		if ( ! preg_match( '/ibh/', $screen->id ) ) {
+			return;
+		}
+		$handler = $this->options->get_option_name( 'admin' );
+		wp_enqueue_script( $handler );
+		wp_localize_script(
+			$handler,
+			'build_a_house',
+			array(
+				'ajaxurl'  => admin_url( 'admin-ajax.php' ),
+				'messages' => array(
+					'import' => __( 'Are you sure to import breakdowns?', 'build-a-house' ),
+				),
+			)
+		);
 	}
 
 	public function register_scripts() {
@@ -221,7 +236,7 @@ class iworks_build_a_house extends iworks {
 	 *
 	 * @since 1.3.0
 	 */
-	public function register_styles() {
+	public function register_assets() {
 		wp_register_style(
 			$this->options->get_option_name( 'frontend' ),
 			sprintf( plugins_url( '/assets/styles/frontend%s.css', $this->base ), $this->dev ? '' : '.min' ),

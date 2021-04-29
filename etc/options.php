@@ -14,16 +14,6 @@ function iworks_build_a_house_options() {
 		'options'    => array(
 			array(
 				'type'  => 'heading',
-				'label' => __( 'Import', 'build-a-house' ),
-			),
-			array(
-				'name'  => 'breakdowns',
-				'type'  => 'button',
-				'th'    => __( 'Breakdowns', 'build-a-house' ),
-				'value' => __( 'Import Breakdowns', 'build-a-house' ),
-			),
-			array(
-				'type'  => 'heading',
 				'label' => __( 'Construction Site', 'build-a-house' ),
 			),
 			array(
@@ -39,9 +29,23 @@ function iworks_build_a_house_options() {
 				'th'   => __( 'City', 'build-a-house' ),
 			),
 		),
-		//      'metaboxes' => array(),
-		'pages'      => array(),
 	);
+	/**
+	 * add import once
+	 */
+	if ( 'imported' !== get_option( 'iworks_build_a_house_breakdowns_import' ) ) {
+		$iworks_build_a_house_options['index']['options'][] = array(
+			'type'  => 'heading',
+			'label' => __( 'Import', 'build-a-house' ),
+		);
+
+		$iworks_build_a_house_options['index']['options'][] = array(
+			'th'    => __( 'Import Breakdowns', 'build-a-house' ),
+			'name'  => 'breakdowns',
+			'type'  => 'button',
+			'value' => __( 'Import Breakdowns', 'build-a-house' ),
+		);
+	}
 	return $iworks_build_a_house_options;
 }
 

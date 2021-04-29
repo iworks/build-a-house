@@ -9,7 +9,7 @@ function build_a_house_import_get_breakdowns() {
 			__( 'Overhead and General Expenses', 'build-a-house' ),
 			__( 'Marketing Cost', 'build-a-house' ),
 			__( 'Sales Commission', 'build-a-house' ),
-			dd  __( 'Profit', 'build-a-house' ),
+			__( 'Profit', 'build-a-house' ),
 		),
 		__( 'Site Work', 'build-a-house' )               => array(
 			__( 'Building Permit Fee', 'build-a-house' ),

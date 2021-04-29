@@ -36,6 +36,13 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	private $users_list                = array();
 	private $boats_list                = array();
 
+	/**
+	 * Semaphore helper for import option name
+	 *
+	 * @since 1.0.0
+	 */
+	private $import_breakdown_option_name = 'iworks_build_a_house_breakdowns_import';
+
 	public function __construct() {
 		parent::__construct();
 		add_filter( 'the_content', array( $this, 'the_content' ) );
@@ -55,6 +62,11 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			$this->nonce_list = $this->options->get_option_name( 'expences_list_nonce' );
 		}
 		add_action( 'wp_ajax_iworks_build_a_house_expences_list', array( $this, 'get_select2_list' ) );
+		add_action( 'wp_ajax_iworks_build_a_house_breakdowns_import', array( $this, 'ajax_import_breakdowns' ) );
+		/**
+		 * Taxonomy
+		 */
+		add_action( 'delete_' . $this->taxonomy_name_breakdown, array( $this, 'breakdown_maybe_allow_import' ) );
 		/**
 		 * admin enqueue scripts
 		 */
@@ -187,7 +199,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		);
 		$args   = array(
 			'labels'             => $labels,
-			'hierarchical'       => false,
+			'hierarchical'       => true,
 			'public'             => true,
 			'show_admin_column'  => true,
 			'show_in_nav_menus'  => true,
@@ -473,6 +485,64 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			$this->load_template( 'build-a-house/block/expences', 'table-footer', array( 'sum' => $sum ) );
 		}
 		wp_reset_postdata();
+	}
+
+	private function import_breakdown( $value, $data, $parent_ID ) {
+		if ( preg_match( '/^\d+$/', $value ) && is_string( $data ) ) {
+			$value = $data;
+		}
+		$term = get_term_by( 'name', $value, $this->taxonomy_name_breakdown );
+		if ( is_a( $term, 'WP_Term' ) ) {
+			$parent_ID = $term->term_id;
+		} else {
+			$retun = wp_insert_term( $value, $this->taxonomy_name_breakdown, array( 'parent' => $parent_ID ) );
+			if ( is_wp_error( $retun ) ) {
+				return;
+			}
+			$parent_ID = $retun['term_id'];
+		}
+		if ( ! is_array( $data ) ) {
+			return;
+		}
+		foreach ( $data as $key => $one ) {
+			$this->import_breakdown( $key, $one, $parent_ID );
+		}
+
+	}
+
+	public function ajax_import_breakdowns() {
+		$nonce = filter_input( INPUT_POST, '_wpnonce', FILTER_SANITIZE_STRING );
+		if ( ! wp_verify_nonce( $nonce, 'iworks_build_a_house_breakdowns' ) ) {
+			wp_send_json_error();
+		}
+		if ( 'imported' === get_option( $this->import_breakdown_option_name ) ) {
+			wp_send_json_error();
+		}
+		$file = sprintf( '%s/assets/import/breakdowns.php', $this->base );
+		if ( ! is_file( $file ) ) {
+			wp_send_json_error();
+		}
+		require_once $file;
+		$data = build_a_house_import_get_breakdowns();
+		foreach ( $data as $key => $one ) {
+			$this->import_breakdown( $key, $one, 0 );
+		}
+		add_option( $this->import_breakdown_option_name, 'imported', '', 'no' );
+		wp_send_json_success();
+	}
+
+	public function breakdown_maybe_allow_import( $term_id ) {
+		$num = wp_count_terms(
+			$this->taxonomy_name_breakdown,
+			array(
+				'hide_empty' => false,
+				'parent'     => 0,
+			)
+		);
+		if ( 0 < $num ) {
+			return;
+		}
+		delete_option( $this->import_breakdown_option_name );
 	}
 
 }
