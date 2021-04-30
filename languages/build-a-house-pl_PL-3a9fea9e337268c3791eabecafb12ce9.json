@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2021-04-30 09:57+0200",
+    "translation-revision-date": "2021-04-30 12:40+0200",
     "generator": "WP-CLI\/2.4.0",
     "source": "assets\/blocks\/expences.js",
     "domain": "messages",
@@ -10,14 +10,11 @@
                 "lang": "pl",
                 "plural-forms": "nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
             },
-            "Build a House: expences": [
-                "Zbuduj Dom: wydatki"
-            ],
-            "Show expences from selected period.": [
-                "Poka\u017c wydatki z wybranego okresu."
-            ],
             "Expences Settings": [
                 "Ustawienia wydatk\u00f3w"
+            ],
+            "Expences": [
+                "Wydatki"
             ],
             "Period:": [
                 "Okres:"

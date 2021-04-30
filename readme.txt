@@ -101,6 +101,9 @@ Breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
+= 1.0.3 (2021-xx-xx) =
+* Added block pattern "Expenses with header".
+
 = 1.0.2 (2021-04-29) =
 * Added polish translation into block.
 

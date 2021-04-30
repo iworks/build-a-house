@@ -26,10 +26,10 @@
     };
 
     blocks.registerBlockType('build-a-house/expences', {
-        title: __('Build a House: expences', 'build-a-house'),
+        title: __('Expences', 'build-a-house'),
         description: __('Show expences from selected period.', 'build-a-house'),
         icon: 'money-alt',
-        category: 'common',
+        category: 'build-a-house',
         attributes: {
             kind: {
                 type: 'string',

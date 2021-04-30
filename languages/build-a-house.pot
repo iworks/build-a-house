@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Build a House PLUGIN_VERSION\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build-a-house\n"
-"POT-Creation-Date: 2021-04-30 07:32:43+00:00\n"
+"POT-Creation-Date: 2021-04-30 10:38:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -577,6 +577,8 @@ msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:135
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:137
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:407
+#: assets/blocks/expences.js:45
 msgid "Expences"
 msgstr ""
 
@@ -705,26 +707,20 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:402
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:425
-#: assets/blocks/expences.js:29
-msgid "Build a House: expences"
-msgstr ""
-
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:405
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:428
-#: assets/blocks/expences.js:30
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:410
 msgid "Show expences from selected period."
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:407
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:430
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:412
 msgid "expences"
 msgstr ""
 
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:408
-#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:431
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:413
 msgid "table"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:431
+msgid "Expences with header"
 msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes.php:268
@@ -783,16 +779,20 @@ msgstr ""
 msgid "Build a House do not have such post type!"
 msgstr ""
 
-#: vendor/iworks/build-a-house.php:136
+#: vendor/iworks/build-a-house.php:137
 msgid "Are you sure to import breakdowns?"
 msgstr ""
 
-#: vendor/iworks/build-a-house.php:212
+#: vendor/iworks/build-a-house.php:213
 msgid "Settings"
 msgstr ""
 
-#: vendor/iworks/build-a-house.php:214
+#: vendor/iworks/build-a-house.php:215
 msgid "Donate"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Build a House"
 msgstr ""
 
 #: vendor/iworks/options/options.php:237
@@ -849,10 +849,6 @@ msgstr ""
 
 #: vendor/iworks/rate/rate.php:397
 msgid "No thanks"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-msgid "Build a House"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -916,6 +912,11 @@ msgctxt "Breakdown Singular Name"
 msgid "Breakdown"
 msgstr ""
 
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:432
+msgctxt "Block pattern description"
+msgid "Show expences with header."
+msgstr ""
+
 #: vendor/iworks/build-a-house/posttypes.php:266
 msgctxt "Taxonomy General Name"
 msgid "Locations"
@@ -923,7 +924,7 @@ msgstr ""
 
 #: vendor/iworks/build-a-house/posttypes.php:267
 msgctxt "Taxonomy Singular Name"
-msgid "Location"
+msgid "Locations"
 msgstr ""
 
 #: assets/blocks/expences.js:45
@@ -953,3 +954,4 @@ msgstr ""
 #: assets/blocks/expences.js:88
 msgid "Configure block on sidebar."
 msgstr ""
+

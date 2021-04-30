@@ -75,7 +75,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		/**
 		 * block
 		 */
-		add_action( 'init', array( $this, 'register_block_types' ) );
+		add_action( 'init', array( $this, 'register_blocks' ) );
 		/**
 		 * fields
 		 */
@@ -391,7 +391,12 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		wp_enqueue_style( $this->options->get_option_name( 'admin' ) );
 	}
 
-	public function register_block_types() {
+	/**
+	 * register blocs & blocs patterns
+	 *
+	 * @since 1.0.0
+	 */
+	public function register_blocks() {
 		if ( ! function_exists( 'register_block_type' ) ) {
 			// Block editor is not available.
 			return;
@@ -399,8 +404,8 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		register_block_type(
 			'build-a-house/expences',
 			array(
-				'title'           => __( 'Build a House: expences', 'build-a-house' ),
-				'category'        => 'common',
+				'title'           => __( 'Expences', 'build-a-house' ),
+				'category'        => 'build-a-house',
 				'icon'            => 'money-alt',
 				'description'     => __( 'Show expences from selected period.', 'build-a-house' ),
 				'keywords'        => array(
@@ -417,6 +422,15 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 				'render_callback' => array( $this, 'render_callback_block_expences' ),
 				'style'           => $this->options->get_option_name( 'blocks-expences' ),
 				'editor_script'   => $this->options->get_option_name( 'admin-block-expences' ),
+			)
+		);
+		register_block_pattern(
+			'build-a-house/expences-pattern',
+			array(
+				'category'    => 'build-a-house',
+				'title'       => __( 'Expences with header', 'build-a-house' ),
+				'description' => _x( 'Show expences with header.', 'Block pattern description', 'build-a-house' ),
+				'content'     => '<!-- wp:group --><div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading --><h2></h2><!-- /wp:heading --><!-- wp:build-a-house/expences --><div data-kind="all" class="wp-block-build-a-house-expences"></div><!-- /wp:build-a-house/expences --></div></div><!-- /wp:group -->',
 			)
 		);
 	}
@@ -475,6 +489,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 				);
 				break;
 		}
+		ob_start();
 		$the_query = new WP_Query( $args );
 		if ( $the_query->have_posts() ) {
 			$this->load_template( 'build-a-house/block/expences', 'table-header' );
@@ -495,6 +510,9 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 			$this->load_template( 'build-a-house/block/expences', 'table-footer', array( 'sum' => $sum ) );
 		}
 		wp_reset_postdata();
+		$content = ob_get_contents();
+		ob_end_clean();
+		return $content;
 	}
 
 	private function import_breakdown( $value, $data, $parent_ID ) {

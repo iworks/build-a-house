@@ -56,6 +56,7 @@ class iworks_build_a_house extends iworks {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_action( 'init', array( $this, 'db_install' ) );
 		add_action( 'init', array( $this, 'register_scripts' ), 0 );
+		add_action( 'init', array( $this, 'register_block_pattern_category' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		/**
@@ -297,12 +298,24 @@ class iworks_build_a_house extends iworks {
 	/**
 	 * Enquque styles
 	 *
-	 * @since 1.3.0
+	 * @since 1.0.0
 	 */
 	public function enqueue_styles() {
 		if ( $this->options->get_option( 'load_frontend_css' ) ) {
 			wp_enqueue_style( $this->options->get_option_name( 'frontend' ) );
 		}
+	}
+
+	/**
+	 * Register block pattern category
+	 *
+	 * @since 1.0.3
+	 */
+	public function register_block_pattern_category() {
+		register_block_pattern_category(
+			'build-a-house',
+			array( 'label' => __( 'Build a House', 'build-a-house' ) )
+		);
 	}
 
 }

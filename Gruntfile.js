@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                 'vendor/.*',
                 'assets/.*/.*php$',
                 'etc/.*php$',
-                'assets/**/*.js',
+                'assets/blocks/*.js',
             ],
             pot_dir: 'languages/', // With trailing slash.
             textdomain: '<%= pkg.name %>',
