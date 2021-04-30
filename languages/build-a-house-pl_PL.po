@@ -1,20 +1,18 @@
-# Translation of Plugins - Build a House - Stable (latest release) in Polish
-# This file is distributed under the same license as the Plugins - Build a House - Stable (latest release) package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - Build a House - Stable (latest release)\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build-a-house\n"
-"POT-Creation-Date: 2021-04-29 15:36:33+00:00\n"
-"PO-Revision-Date: 2021-04-30 07:36+0200\n"
 "Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
 "Language-Team: \n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 "
-"&& (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"POT-Creation-Date: 2021-04-30 07:32:43+00:00\n"
+"PO-Revision-Date: 2021-04-30 09:57+0200\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
 "X-Generator: Poedit 2.3\n"
+"X-Poedit-Bookmarks: -1,133,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: assets/import/breakdowns.php:5
 msgid "Sale Price Breakdown"
@@ -80,7 +78,8 @@ msgstr "Mury oporowe"
 msgid "Backfill"
 msgstr "Podsypka"
 
-#: assets/import/breakdowns.php:24 assets/import/breakdowns.php:25
+#: assets/import/breakdowns.php:24
+#: assets/import/breakdowns.php:25
 msgid "Framing"
 msgstr "Konstrukcja ścian"
 
@@ -248,10 +247,6 @@ msgstr "Data rozpoczęcia"
 msgid "Cost"
 msgstr "Koszt"
 
-#. Plugin Name of the plugin/theme
-msgid "Build a House"
-msgstr "Zbuduj Dom"
-
 #: etc/options.php:11
 msgid "Configuration"
 msgstr "Konfiguracja"
@@ -260,7 +255,8 @@ msgstr "Konfiguracja"
 msgid "Construction Site"
 msgstr "Budowa"
 
-#: etc/options.php:21 vendor/iworks/options/options.php:1633
+#: etc/options.php:21
+#: vendor/iworks/options/options.php:1633
 msgid "Street"
 msgstr "Ulica"
 
@@ -278,21 +274,22 @@ msgstr "Miasto"
 msgid "Import"
 msgstr "Import"
 
-#: etc/options.php:43 etc/options.php:46
+#: etc/options.php:43
+#: etc/options.php:46
 msgid "Import Breakdowns"
 msgstr "Import kroków budowy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:39
 msgid "Full Name:"
-msgstr ""
+msgstr "Nazwa:"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:42
 msgid "Street Address 1:"
-msgstr ""
+msgstr "Ulica 1:"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:45
 msgid "Street Address 2:"
-msgstr ""
+msgstr "Ulica 2:"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:48
 msgid "ZIP Code:"
@@ -306,23 +303,23 @@ msgstr "Kraj"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:57
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:238
 msgid "NIP"
-msgstr ""
+msgstr "NIP"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:60
 msgid "REGON"
-msgstr ""
+msgstr "REGON"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:63
 msgid "KRS"
-msgstr ""
+msgstr "KRS"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:66
 msgid "Bank"
-msgstr ""
+msgstr "Bank"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:69
 msgid "Bank account"
-msgstr ""
+msgstr "Numer konta bankowego"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:73
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:77
@@ -345,26 +342,26 @@ msgstr "telefon"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:102
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:107
 msgid "Contractors"
-msgstr ""
+msgstr "Dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:103
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:129
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:90
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:282
 msgid "Contractor"
-msgstr ""
+msgstr "Dostawca"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:104
 msgid "Contractor Archives"
-msgstr ""
+msgstr "Archiwum dostawców"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:105
 msgid "Contractor Attributes"
-msgstr ""
+msgstr "Właściwości dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:106
 msgid "Parent Contractor:"
-msgstr ""
+msgstr "Dostawca nadrzędny:"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:108
 msgid "Add New Contractor"
@@ -377,27 +374,27 @@ msgstr "Dodaj"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:110
 msgid "New Contractor"
-msgstr ""
+msgstr "Dodaj dostawcę"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:111
 msgid "Edit Contractor"
-msgstr ""
+msgstr "Edytuj dostawcę"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:112
 msgid "Update Contractor"
-msgstr ""
+msgstr "Aktualizuj dostawcę"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:113
 msgid "View Contractor"
-msgstr ""
+msgstr "Podejrzyj dostawcę"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:114
 msgid "View Contractors"
-msgstr ""
+msgstr "Podejrzyj dostawców"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:115
 msgid "Search Contractor"
-msgstr ""
+msgstr "Szukaj dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:116
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:78
@@ -438,45 +435,45 @@ msgstr "Użyj jako obrazek wyróżniający"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:122
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:84
 msgid "Insert into contractor"
-msgstr ""
+msgstr "Dodaj do dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:123
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:85
 msgid "Uploaded to this contractor"
-msgstr ""
+msgstr "Dodaj do dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:124
 msgid "Contractors list"
-msgstr ""
+msgstr "Lista dostawców"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:125
 msgid "Contractors list navigation"
-msgstr ""
+msgstr "Nawigacja listy dostawców"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:126
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:88
 msgid "Filter contractors list"
-msgstr ""
+msgstr "Filtruj listę dostawców"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:130
 msgid "Contractor Description"
-msgstr ""
+msgstr "Opis dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:152
 msgid "Contractor Data"
-msgstr ""
+msgstr "Dane dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:153
 msgid "Contact Data"
-msgstr ""
+msgstr "Dane dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:237
 msgid "Full Name"
-msgstr ""
+msgstr "Nazwa"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:295
 msgid "All contractors"
-msgstr ""
+msgstr "Wszyscy dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:40
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:44
@@ -491,68 +488,68 @@ msgstr "Zdarzenia"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:65
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:91
 msgid "Event"
-msgstr ""
+msgstr "Zdarzenie"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:66
 msgid "Event Archives"
-msgstr ""
+msgstr "Archiwum zdarzeń"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:67
 msgid "Event Attributes"
-msgstr ""
+msgstr "Właściwości zdarzenia"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:68
 msgid "Parent Event:"
-msgstr ""
+msgstr "Zdarzenie nadrzędne:"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:70
 msgid "Add New Event"
-msgstr ""
+msgstr "Dodaj zdarzenie"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:72
 msgid "New Event"
-msgstr ""
+msgstr "Dodaj zdarzenie"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:73
 msgid "Edit Event"
-msgstr ""
+msgstr "Edytuj zdarzenie"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:74
 msgid "Update Event"
-msgstr ""
+msgstr "Aktualizuj zdarzenie"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:75
 msgid "View Event"
-msgstr ""
+msgstr "Podejrzyj zdarzenie"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:76
 msgid "View Events"
-msgstr ""
+msgstr "Podejrzyj zdarzenia"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:77
 msgid "Search Event"
-msgstr ""
+msgstr "Szukaj zdarzenia"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:86
 msgid "Events list"
-msgstr ""
+msgstr "Lista zdarzeń"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:87
 msgid "Events list navigation"
-msgstr ""
+msgstr "Nawigacja listy zdarzeń"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:92
 msgid "Event Description"
-msgstr ""
+msgstr "Opis zdarzenia"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:114
 msgid "Event Data"
-msgstr ""
+msgstr "Dane zdarzenia"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:157
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:102
 msgid "Date End"
-msgstr ""
+msgstr "Data ukończenia"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:104
 msgid "Mobile"
@@ -569,7 +566,7 @@ msgstr "Zbuduj dom"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:134
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:159
 msgid "Expence"
-msgstr ""
+msgstr "Wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:135
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:137
@@ -578,28 +575,28 @@ msgstr "Wydatki"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:136
 msgid "Item Attributes"
-msgstr ""
+msgstr "Właściwości elementu"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:138
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:139
 msgid "Add New expence"
-msgstr ""
+msgstr "Dodaj wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:140
 msgid "New expence"
-msgstr ""
+msgstr "Dodaj wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:141
 msgid "Edit expence"
-msgstr ""
+msgstr "Edytuj wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:142
 msgid "Update expence"
-msgstr ""
+msgstr "Aktualizuj wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:143
 msgid "View expence"
-msgstr ""
+msgstr "Podejrzyj wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:144
 msgid "View expences"
@@ -607,15 +604,15 @@ msgstr "Zobacz wydatki"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:145
 msgid "Search expence"
-msgstr ""
+msgstr "Szukaj wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:152
 msgid "Insert into item"
-msgstr ""
+msgstr "Dodaj do elementu"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:153
 msgid "Uploaded to this item"
-msgstr ""
+msgstr "Dodaj do elementu"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:154
 msgid "Items list"
@@ -636,7 +633,7 @@ msgstr "Etapy budowy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:185
 msgid "New Breakdown Name"
-msgstr ""
+msgstr "Nowa nazwa etapu"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:186
 msgid "Add New Breakdown"
@@ -691,15 +688,37 @@ msgstr "Lista etapów budowy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:198
 msgid "Breakdowns list navigation"
-msgstr ""
+msgstr "Nawigacja etapów budowy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:221
 msgid "Detailed data"
-msgstr ""
+msgstr "Dane szczegółowe"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:284
 msgid "Date"
 msgstr "Data"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:402
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:425
+#: assets/blocks/expences.js:29
+msgid "Build a House: expences"
+msgstr "Zbuduj Dom: wydatki"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:405
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:428
+#: assets/blocks/expences.js:30
+msgid "Show expences from selected period."
+msgstr "Pokaż wydatki z wybranego okresu."
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:407
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:430
+msgid "expences"
+msgstr "wydatki"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:408
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:431
+msgid "table"
+msgstr "tabela"
 
 #: vendor/iworks/build-a-house/posttypes.php:268
 msgid "Locations"
@@ -711,63 +730,63 @@ msgstr "Wszystkie miejsca"
 
 #: vendor/iworks/build-a-house/posttypes.php:270
 msgid "New Locations Name"
-msgstr ""
+msgstr "Nowa nazwa miejsc"
 
 #: vendor/iworks/build-a-house/posttypes.php:271
 msgid "Add New Locations"
-msgstr ""
+msgstr "Dodaj miejsce"
 
 #: vendor/iworks/build-a-house/posttypes.php:272
 msgid "Edit Locations"
-msgstr ""
+msgstr "Edytuj miejsca"
 
 #: vendor/iworks/build-a-house/posttypes.php:273
 msgid "Update Locations"
-msgstr ""
+msgstr "Aktualizuj miejsca"
 
 #: vendor/iworks/build-a-house/posttypes.php:274
 msgid "View Locations"
-msgstr ""
+msgstr "Podejrzyj miejsca"
 
 #: vendor/iworks/build-a-house/posttypes.php:275
 msgid "Separate Locations with commas"
-msgstr ""
+msgstr "Oddzielaj miejsca przecinkami"
 
 #: vendor/iworks/build-a-house/posttypes.php:276
 msgid "Add or remove Locations"
-msgstr ""
+msgstr "Dodaj lub usuń miejsca"
 
 #: vendor/iworks/build-a-house/posttypes.php:278
 msgid "Popular Locations"
-msgstr ""
+msgstr "Popularne miejsca"
 
 #: vendor/iworks/build-a-house/posttypes.php:279
 msgid "Search Locations"
-msgstr ""
+msgstr "Szukaj miejsce"
 
 #: vendor/iworks/build-a-house/posttypes.php:282
 msgid "Locations list"
-msgstr ""
+msgstr "Lista miejsc"
 
 #: vendor/iworks/build-a-house/posttypes.php:283
 msgid "Locations list navigation"
-msgstr ""
+msgstr "Nawigacja listy miejsc"
 
 #: vendor/iworks/build-a-house.php:81
 msgid "Build a House do not have such post type!"
-msgstr ""
+msgstr "Wtyczka Zbuduj Dom nie posiada takiego typu treści!"
 
-#: vendor/iworks/build-a-house.php:122
+#: vendor/iworks/build-a-house.php:136
 msgid "Are you sure to import breakdowns?"
-msgstr ""
+msgstr "Czy na pewno zaimportować etapy budowy?"
 
-#: vendor/iworks/build-a-house.php:197
+#: vendor/iworks/build-a-house.php:212
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: vendor/iworks/build-a-house.php:199
+#: vendor/iworks/build-a-house.php:214
 msgid "Donate"
-msgstr ""
+msgstr "Przekaż datek"
 
 #: vendor/iworks/options/options.php:237
 msgid "An error occurred while getting the configuration."
@@ -795,35 +814,35 @@ msgstr "Wyłącz"
 
 #: vendor/iworks/options/options.php:1784
 msgid "ON"
-msgstr ""
+msgstr "Włącz"
 
 #: vendor/iworks/rate/rate.php:373
-msgid ""
-"Hey %1$s, you've been using %2$s for a while now, and we hope you're happy "
-"with it."
-msgstr ""
+msgid "Hey %1$s, you've been using %2$s for a while now, and we hope you're happy with it."
+msgstr "Hej %1$s, już jakiś czas jest używana wtyczka %2$s i mamy nadzieję, że jej użycie sprawia przyjemność."
 
 #: vendor/iworks/rate/rate.php:373
-msgid ""
-"We've spent countless hours developing this free plugin for you, and we "
-"would really appreciate it if you dropped us a quick rating!"
-msgstr ""
+msgid "We've spent countless hours developing this free plugin for you, and we would really appreciate it if you dropped us a quick rating!"
+msgstr "Spędziliśmy niezliczone godziny na opracowywaniu tej bezpłatnej wtyczki i bylibyśmy wdzięczni, za wystawienie oceny!"
 
 #: vendor/iworks/rate/rate.php:388
 msgid "Thanks :)"
-msgstr ""
+msgstr "Dziękuję :)"
 
 #: vendor/iworks/rate/rate.php:391
 msgid "Rate %s"
-msgstr ""
+msgstr "Oceń %s"
 
 #: vendor/iworks/rate/rate.php:396
 msgid "Saving"
-msgstr ""
+msgstr "Zapisywanie"
 
 #: vendor/iworks/rate/rate.php:397
 msgid "No thanks"
-msgstr ""
+msgstr "Nie dziękuję"
+
+#. Plugin Name of the plugin/theme
+msgid "Build a House"
+msgstr "Zbuduj Dom"
 
 #. Plugin URI of the plugin/theme
 msgid "http://iworks.pl/build-a-house/"
@@ -844,12 +863,12 @@ msgstr "http://iworks.pl/"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:100
 msgctxt "Contractor General Name"
 msgid "Contractors"
-msgstr ""
+msgstr "Dostawcy"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:101
 msgctxt "Contractor Singular Name"
 msgid "Contractor"
-msgstr ""
+msgstr "Dostawca"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:62
 msgctxt "Event General Name"
@@ -859,7 +878,7 @@ msgstr "Zdarzenia"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:63
 msgctxt "Event Singular Name"
 msgid "Event"
-msgstr ""
+msgstr "Zdarzenie"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:131
 msgctxt "expence General Name"
@@ -869,7 +888,7 @@ msgstr "Wydatki"
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:132
 msgctxt "expence Singular Name"
 msgid "Expence"
-msgstr ""
+msgstr "Wydatek"
 
 #: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:168
 msgctxt "slug for archive"
@@ -893,26 +912,9 @@ msgstr "Miejsca"
 
 #: vendor/iworks/build-a-house/posttypes.php:267
 msgctxt "Taxonomy Singular Name"
-msgid "Locations"
-msgstr "Miejsc"
+msgid "Location"
+msgstr "Miejsce"
 
-#~ msgid "Configure block on sidebar."
-#~ msgstr "Konfiguracja bloku w panelu bocznym."
-
-#~ msgid "Last 7 days"
-#~ msgstr "Ostatnie 7 dni"
-
-#~ msgid "This month"
-#~ msgstr "Aktualny miesiąc"
-
-#~ msgid "This year"
-#~ msgstr "Aktualny rok"
-
-#~ msgid "All data"
-#~ msgstr "Wszystkie dane"
-
-#~ msgid "Period:"
-#~ msgstr "Okres:"
-
-#~ msgid "Show expences from selected period."
-#~ msgstr "Pokażwydatkiw wybranego okresu."
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Locations"
+#~ msgstr "Miejsc"

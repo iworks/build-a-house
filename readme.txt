@@ -101,6 +101,9 @@ Breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
+= 1.0.2 (2021-04-29) =
+* Added polish translation into block.
+
 = 1.0.1 (2021-04-28) =
 * Fixed translations.
 * Improved breakdowns import list.

@@ -58,7 +58,6 @@ class iworks_build_a_house extends iworks {
 		add_action( 'init', array( $this, 'register_scripts' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-		add_action( 'enqueue_block_editor_assets', array( $this, 'load_blocks' ) );
 		/**
 		 * iWorks Rate integration
 		 */
@@ -101,6 +100,21 @@ class iworks_build_a_house extends iworks {
 		$version = $this->get_version( $file );
 		$file    = plugins_url( $file, $this->base );
 		wp_register_style( $this->options->get_option_name( 'admin' ), $file, array( 'jquery-ui-datepicker', 'select2' ), $version );
+		/**
+		 * Block: build-a-house-expences
+		 */
+		$handler = $this->options->get_option_name( 'admin-block-expences' );
+		wp_register_script(
+			$handler,
+			plugins_url( 'assets/blocks/expences.js', $this->base ),
+			array( 'wp-editor', 'wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor' ),
+			$version
+		);
+		wp_set_script_translations(
+			$handler,
+			'build-a-house',
+			dirname( $this->base ) . '/languages/'
+		);
 	}
 
 	public function admin_enqueue() {
@@ -123,6 +137,7 @@ class iworks_build_a_house extends iworks {
 				),
 			)
 		);
+		wp_enqueue_style( $handler );
 	}
 
 	public function register_scripts() {
@@ -289,15 +304,5 @@ class iworks_build_a_house extends iworks {
 			wp_enqueue_style( $this->options->get_option_name( 'frontend' ) );
 		}
 	}
-
-	public function load_blocks() {
-		wp_enqueue_script(
-			'build-a-house-expences',
-			plugins_url( 'assets/blocks/expences.js', $this->base ),
-			array( 'wp-blocks', 'wp-editor' ),
-			true
-		);
-	}
-
 
 }

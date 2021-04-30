@@ -237,8 +237,8 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	public function custom_columns( $column, $post_id ) {
 		$value = get_post_meta( $post_id, $this->options->get_option_name( $column ), true );
 		switch ( $column ) {
-			case 'contractor':
-				$id = get_post_meta( $post_id, $this->get_custom_field_basic_contractor_name(), true );
+			case 'details_contractor':
+				$id = intval( $value );
 				if ( empty( $id ) ) {
 					echo '-';
 				} else {
@@ -279,7 +279,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	 */
 	public function add_columns( $columns ) {
 		unset( $columns['date'] );
-		$columns['contractor']         = __( 'Contractor', 'build-a-house' );
+		$columns['details_contractor'] = __( 'Contractor', 'build-a-house' );
 		$columns['details_cost']       = __( 'Cost', 'build-a-house' );
 		$columns['details_date_start'] = __( 'Date', 'build-a-house' );
 		return $columns;
@@ -399,6 +399,15 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		register_block_type(
 			'build-a-house/expences',
 			array(
+				'title'           => __( 'Build a House: expences', 'build-a-house' ),
+				'category'        => 'common',
+				'icon'            => 'money-alt',
+				'description'     => __( 'Show expences from selected period.', 'build-a-house' ),
+				'keywords'        => array(
+					__( 'expences', 'build-a-house' ),
+					__( 'table', 'build-a-house' ),
+				),
+				'textdomain'      => 'build-a-house',
 				'attributes'      => array(
 					'kind' => array(
 						'type' => 'string',
@@ -407,6 +416,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 				),
 				'render_callback' => array( $this, 'render_callback_block_expences' ),
 				'style'           => $this->options->get_option_name( 'blocks-expences' ),
+				'editor_script'   => $this->options->get_option_name( 'admin-block-expences' ),
 			)
 		);
 	}

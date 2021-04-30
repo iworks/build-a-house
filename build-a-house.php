@@ -63,10 +63,7 @@ if ( ! class_exists( 'iworks_options' ) ) {
 /**
  * i18n
  */
-function build_a_house_load_plugin_textdomain() {
-    load_plugin_textdomain( 'build-a-house', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
-}
-add_action( 'init', 'build_a_house_load_plugin_textdomain' );
+load_plugin_textdomain( 'build-a-house', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
 
 /**
  * load options

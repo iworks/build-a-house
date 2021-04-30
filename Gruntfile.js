@@ -51,10 +51,16 @@ module.exports = function(grunt) {
                 '.git*',
                 'inc/external/.*', // External libraries.
                 'node_modules/.*',
-                '(^.php)', // Ignore non-php files.
                 'release/.*', // Temp release files.
                 '.sass-cache/.*',
                 'tests/.*', // Unit testing.
+            ],
+            include: [
+                '*.php',
+                'vendor/.*',
+                'assets/.*/.*php$',
+                'etc/.*php$',
+                'assets/**/*.js',
             ],
             pot_dir: 'languages/', // With trailing slash.
             textdomain: '<%= pkg.name %>',
@@ -354,6 +360,7 @@ module.exports = function(grunt) {
                     cwd: '',
                     domainPath: conf.translation.pot_dir,
                     exclude: conf.translation.ignore_files,
+                    include: conf.translation.include,
                     mainFile: conf.dev_plugin_file,
                     potFilename: conf.translation.textdomain + '.pot',
                     potHeaders: {
@@ -409,8 +416,7 @@ module.exports = function(grunt) {
         grunt.task.run('clean');
         grunt.task.run('js');
         grunt.task.run('css');
-        grunt.task.run('makepot');
-
+        // grunt.task.run('makepot');
         //		grunt.task.run( 'po2mo');
         grunt.task.run('copy');
         grunt.task.run('replace');

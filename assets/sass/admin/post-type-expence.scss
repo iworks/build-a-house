@@ -12,97 +12,15 @@
     }
 }
 
-#income,
-#expense {
-    .iworks-build_a_house-row {
-        display: block;
-        label {
-            display: block;
-            width: 100%;
-        }
-    }
-}
-
 .wp-list-table {
+    .column-details_cost {
+        width: 7em;
+    }
     tbody {
-        .column-symbol,
-        .column-expense,
-        .column-income {
+        .column-details_cost {
             text-align: right;
-        }
-        .column-expense,
-        .column-income {
             padding-right: 10px;
         }
     }
-    .column-expense,
-    .column-income {
-        width: 5em;
-    }
-    .column-date_of_invoice {
-        width: 10em;
-    }
-    .column-symbol {
-        width: 1em;
-    }
-    .duplicate_invoice {
-        a {
-            cursor: pointer
-        }
-    }
 }
 
-body {
-    &:not(.kpir-not-set) {
-        .iworks-type {
-            .iworks-build_a_house-row-description {
-                display: none;
-            }
-        }
-    }
-    &.kpir-not-set {
-        .iworks-type {
-            .iworks-build_a_house-row {
-                display: none;
-            }
-            .iworks-build_a_house-row-description {
-                display: block;
-            }
-        }
-    }
-    &.income {
-        .iworks-type {
-            &:not(#income) {
-                display: none;
-            }
-        }
-    }
-    &.expense {
-        .iworks-type {
-            &:not(#expense) {
-                display: none;
-            }
-        }
-    }
-    &.salary {
-        .iworks-type {
-            &:not(#salary) {
-                display: none;
-            }
-        }
-    }
-    &.asset {
-        .iworks-type {
-            &:not(#asset) {
-                display: none;
-            }
-        }
-    }
-    &.insurance {
-        .iworks-type {
-            &:not(#insurance) {
-                display: none;
-            }
-        }
-    }
-}
