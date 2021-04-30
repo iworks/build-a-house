@@ -1,14 +1,18 @@
 <?php
 /*
-Plugin Name: Build a House
-Text Domain: build-a-house
-Plugin URI: http://iworks.pl/build-a-house/
-Description: Build a House allows to log expenses and events during construction.
-Version: PLUGIN_VERSION
-Author: Marcin Pietrzak
-Author URI: http://iworks.pl/
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Plugin Name:       Build a House
+ * Plugin URI:        http://iworks.pl/build-a-house/
+ * Description:       Build a House allows to log expenses and events during construction.
+ * Requires at least: 5.0
+ * Requires PHP:      7.2
+ * Version:           PLUGIN_VERSION
+ * Author:            Marcin Pietrzak
+ * Author URI:        http://iworks.pl/
+ * License:           GPLv2 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       build-a-house
+ * Domain Path:       /languages
+ *
 
 Copyright 2020-PLUGIN_TILL_YEAR Marcin Pietrzak (marcin@iworks.pl)
 
@@ -59,7 +63,10 @@ if ( ! class_exists( 'iworks_options' ) ) {
 /**
  * i18n
  */
-load_plugin_textdomain( 'build-a-house', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+function build_a_house_load_plugin_textdomain() {
+    load_plugin_textdomain( 'build-a-house', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+}
+add_action( 'init', 'build_a_house_load_plugin_textdomain' );
 
 /**
  * load options

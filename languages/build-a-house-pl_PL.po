@@ -1,0 +1,918 @@
+# Translation of Plugins - Build a House - Stable (latest release) in Polish
+# This file is distributed under the same license as the Plugins - Build a House - Stable (latest release) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugins - Build a House - Stable (latest release)\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build-a-house\n"
+"POT-Creation-Date: 2021-04-29 15:36:33+00:00\n"
+"PO-Revision-Date: 2021-04-30 07:36+0200\n"
+"Last-Translator: Marcin Pietrzak <marcin@iworks.pl>\n"
+"Language-Team: \n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 "
+"&& (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: Poedit 2.3\n"
+
+#: assets/import/breakdowns.php:5
+msgid "Sale Price Breakdown"
+msgstr "Zakup"
+
+#: assets/import/breakdowns.php:6
+msgid "Finished Lot Cost"
+msgstr "Koszty przygotowania"
+
+#: assets/import/breakdowns.php:7
+msgid "Total Construction Cost"
+msgstr "Całkowity koszt budowy"
+
+#: assets/import/breakdowns.php:8
+msgid "Financing Cost"
+msgstr "Koszty finansowania"
+
+#: assets/import/breakdowns.php:9
+msgid "General Expenses"
+msgstr "Wydatki ogólne"
+
+#: assets/import/breakdowns.php:11
+msgid "Site Work"
+msgstr "Przygotowanie"
+
+#: assets/import/breakdowns.php:12
+msgid "Building Permit Fee"
+msgstr "Opłata za pozwolenie na budowę"
+
+#: assets/import/breakdowns.php:13
+msgid "Impact Fee"
+msgstr "Podatki i opłaty"
+
+#: assets/import/breakdowns.php:14
+msgid "Water & Sewer Fees Inspections"
+msgstr "Przyłącze wodno-kanalizacyjne"
+
+#: assets/import/breakdowns.php:15
+msgid "Architecture"
+msgstr "Architekt"
+
+#: assets/import/breakdowns.php:16
+msgid "Engineering"
+msgstr "Konstruktor"
+
+#: assets/import/breakdowns.php:18
+msgid "Foundations"
+msgstr "Podwaliny"
+
+#: assets/import/breakdowns.php:19
+msgid "Foundation"
+msgstr "Fundament"
+
+#: assets/import/breakdowns.php:20
+msgid "Concrete"
+msgstr "Beton"
+
+#: assets/import/breakdowns.php:21
+msgid "Retaining walls"
+msgstr "Mury oporowe"
+
+#: assets/import/breakdowns.php:22
+msgid "Backfill"
+msgstr "Podsypka"
+
+#: assets/import/breakdowns.php:24 assets/import/breakdowns.php:25
+msgid "Framing"
+msgstr "Konstrukcja ścian"
+
+#: assets/import/breakdowns.php:26
+msgid "Roof"
+msgstr "Dach"
+
+#: assets/import/breakdowns.php:27
+msgid "Trusses"
+msgstr "Konstrukcja"
+
+#: assets/import/breakdowns.php:28
+msgid "Sheathing"
+msgstr "Podbitka"
+
+#: assets/import/breakdowns.php:29
+msgid "Steel"
+msgstr "Stal"
+
+#: assets/import/breakdowns.php:31
+msgid "Exterior Finishes"
+msgstr "Wykończenia zewnętrzne"
+
+#: assets/import/breakdowns.php:32
+msgid "Exterior Wall Finish"
+msgstr "Wykończenie ścian zewnętrznych"
+
+#: assets/import/breakdowns.php:33
+msgid "Roofing"
+msgstr "Zadaszenie"
+
+#: assets/import/breakdowns.php:34
+msgid "Windows"
+msgstr "Okna"
+
+#: assets/import/breakdowns.php:35
+msgid "Doors"
+msgstr "Drzwi"
+
+#: assets/import/breakdowns.php:37
+msgid "Major Systems"
+msgstr "Główne systemy"
+
+#: assets/import/breakdowns.php:38
+msgid "Plumbing"
+msgstr "Hydraulika"
+
+#: assets/import/breakdowns.php:39
+msgid "Electrical"
+msgstr "Elektryka"
+
+#: assets/import/breakdowns.php:40
+msgid "HVAC"
+msgstr "Ogrzewania i klimatyzacja"
+
+#: assets/import/breakdowns.php:41
+msgid "Alarm"
+msgstr "Alarm"
+
+#: assets/import/breakdowns.php:42
+msgid "Smart Home"
+msgstr "Instalacja domu intelientnego"
+
+#: assets/import/breakdowns.php:44
+msgid "Interior Finishes"
+msgstr "Wykończenia wnętrz"
+
+#: assets/import/breakdowns.php:45
+msgid "Insulation"
+msgstr "Izolacja"
+
+#: assets/import/breakdowns.php:46
+msgid "Drywall"
+msgstr "Płyty gipsowo-kartonowe"
+
+#: assets/import/breakdowns.php:47
+msgid "Interior Trims"
+msgstr "Wykończenie wnętrza"
+
+#: assets/import/breakdowns.php:48
+msgid "Internal Doors"
+msgstr "Drzwi wewnętrzne"
+
+#: assets/import/breakdowns.php:49
+msgid "Mirrors"
+msgstr "Lustra"
+
+#: assets/import/breakdowns.php:50
+msgid "Painting"
+msgstr "Malowanie"
+
+#: assets/import/breakdowns.php:51
+msgid "Lighting"
+msgstr "Oświetlenie"
+
+#: assets/import/breakdowns.php:52
+msgid "Cabinets"
+msgstr "Szafy"
+
+#: assets/import/breakdowns.php:53
+msgid "Countertops"
+msgstr "Blaty"
+
+#: assets/import/breakdowns.php:54
+msgid "Appliances"
+msgstr "Urządzenia"
+
+#: assets/import/breakdowns.php:55
+msgid "Flooring"
+msgstr "Posadzka"
+
+#: assets/import/breakdowns.php:56
+msgid "Plumbing Fixtures"
+msgstr "Osprzęt hydrauliczny"
+
+#: assets/import/breakdowns.php:57
+msgid "Fireplace"
+msgstr "Kominek"
+
+#: assets/import/breakdowns.php:59
+msgid "Final Steps"
+msgstr "Ostatnie kroki"
+
+#: assets/import/breakdowns.php:60
+msgid "Landscaping"
+msgstr "Architektura krajobrazu"
+
+#: assets/import/breakdowns.php:61
+msgid "Watering"
+msgstr "Nawadnianie"
+
+#: assets/import/breakdowns.php:62
+msgid "Outdoor Structures (deck patio, porches)"
+msgstr "Konstrukcje zewnętrzne (taras, ganek)"
+
+#: assets/import/breakdowns.php:63
+msgid "Driveway"
+msgstr "Podjazd"
+
+#: assets/import/breakdowns.php:64
+msgid "Clean Up"
+msgstr "Sprzątanie"
+
+#: assets/import/breakdowns.php:66
+msgid "Other"
+msgstr "Inne"
+
+#: assets/template-parts/block/expences-table-header.php:4
+msgid "#"
+msgstr "#"
+
+#: assets/template-parts/block/expences-table-header.php:5
+msgid "Title"
+msgstr "Tytuł"
+
+#: assets/template-parts/block/expences-table-header.php:6
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:156
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:98
+msgid "Date Start"
+msgstr "Data rozpoczęcia"
+
+#: assets/template-parts/block/expences-table-header.php:7
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:86
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:283
+msgid "Cost"
+msgstr "Koszt"
+
+#. Plugin Name of the plugin/theme
+msgid "Build a House"
+msgstr "Zbuduj Dom"
+
+#: etc/options.php:11
+msgid "Configuration"
+msgstr "Konfiguracja"
+
+#: etc/options.php:17
+msgid "Construction Site"
+msgstr "Budowa"
+
+#: etc/options.php:21 vendor/iworks/options/options.php:1633
+msgid "Street"
+msgstr "Ulica"
+
+#: etc/options.php:25
+msgid "Zip code"
+msgstr "Kod pocztowy"
+
+#: etc/options.php:29
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:51
+#: vendor/iworks/options/options.php:1632
+msgid "City"
+msgstr "Miasto"
+
+#: etc/options.php:39
+msgid "Import"
+msgstr "Import"
+
+#: etc/options.php:43 etc/options.php:46
+msgid "Import Breakdowns"
+msgstr "Import kroków budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:39
+msgid "Full Name:"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:42
+msgid "Street Address 1:"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:45
+msgid "Street Address 2:"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:48
+msgid "ZIP Code:"
+msgstr "Kod pocztowy:"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:54
+#: vendor/iworks/options/options.php:1631
+msgid "Country"
+msgstr "Kraj"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:57
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:238
+msgid "NIP"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:60
+msgid "REGON"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:63
+msgid "KRS"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:66
+msgid "Bank"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:69
+msgid "Bank account"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:73
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:77
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:78
+msgid "Website"
+msgstr "Witryna"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:74
+msgid "email"
+msgstr "e-mail"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:75
+msgid "mobile"
+msgstr "komórka"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:76
+msgid "phone"
+msgstr "telefon"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:102
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:107
+msgid "Contractors"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:103
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:129
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:90
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:282
+msgid "Contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:104
+msgid "Contractor Archives"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:105
+msgid "Contractor Attributes"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:106
+msgid "Parent Contractor:"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:108
+msgid "Add New Contractor"
+msgstr "Dodaj dostawcę"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:109
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:71
+msgid "Add New"
+msgstr "Dodaj"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:110
+msgid "New Contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:111
+msgid "Edit Contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:112
+msgid "Update Contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:113
+msgid "View Contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:114
+msgid "View Contractors"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:115
+msgid "Search Contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:116
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:78
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:146
+msgid "Not found"
+msgstr "Nie znaleziono"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:117
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:79
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:147
+msgid "Not found in Trash"
+msgstr "Nie znaleziono w koszu"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:118
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:80
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:148
+msgid "Featured Image"
+msgstr "Obrazek wyróżniający"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:119
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:81
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:149
+msgid "Set featured image"
+msgstr "Ustaw obrazek wyróżniający"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:120
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:82
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:150
+msgid "Remove featured image"
+msgstr "Usuń obrazek wyróżniający"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:121
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:83
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:151
+msgid "Use as featured image"
+msgstr "Użyj jako obrazek wyróżniający"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:122
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:84
+msgid "Insert into contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:123
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:85
+msgid "Uploaded to this contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:124
+msgid "Contractors list"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:125
+msgid "Contractors list navigation"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:126
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:88
+msgid "Filter contractors list"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:130
+msgid "Contractor Description"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:152
+msgid "Contractor Data"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:153
+msgid "Contact Data"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:237
+msgid "Full Name"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:295
+msgid "All contractors"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:40
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:44
+msgid "Date start"
+msgstr "Data rozpoczęcia"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:64
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:69
+msgid "Events"
+msgstr "Zdarzenia"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:65
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:91
+msgid "Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:66
+msgid "Event Archives"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:67
+msgid "Event Attributes"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:68
+msgid "Parent Event:"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:70
+msgid "Add New Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:72
+msgid "New Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:73
+msgid "Edit Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:74
+msgid "Update Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:75
+msgid "View Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:76
+msgid "View Events"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:77
+msgid "Search Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:86
+msgid "Events list"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:87
+msgid "Events list navigation"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:92
+msgid "Event Description"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:114
+msgid "Event Data"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:157
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:102
+msgid "Date End"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:104
+msgid "Mobile"
+msgstr "Komórka"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:105
+msgid "E-mail"
+msgstr "E-mail"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:133
+msgid "Build a house"
+msgstr "Zbuduj dom"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:134
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:159
+msgid "Expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:135
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:137
+msgid "Expences"
+msgstr "Wydatki"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:136
+msgid "Item Attributes"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:138
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:139
+msgid "Add New expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:140
+msgid "New expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:141
+msgid "Edit expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:142
+msgid "Update expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:143
+msgid "View expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:144
+msgid "View expences"
+msgstr "Zobacz wydatki"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:145
+msgid "Search expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:152
+msgid "Insert into item"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:153
+msgid "Uploaded to this item"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:154
+msgid "Items list"
+msgstr "Lista elementów"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:155
+msgid "Items list navigation"
+msgstr "Nawigacja listy elementów"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:156
+msgid "Filter items list"
+msgstr "Filtruj elementy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:183
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:184
+msgid "Breakdowns"
+msgstr "Etapy budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:185
+msgid "New Breakdown Name"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:186
+msgid "Add New Breakdown"
+msgstr "Dodaj etap"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:187
+msgid "Edit Breakdown"
+msgstr "Edytuj krok budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:188
+msgid "Update Breakdown"
+msgstr "Aktualizuj krok budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:189
+msgid "View Breakdown"
+msgstr "Zobacz krok budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:190
+msgid "Separate items with commas"
+msgstr "Oddzielaj elementy przecinkami"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:191
+msgid "Add or remove items"
+msgstr "Dodaj lub usuń element"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:192
+#: vendor/iworks/build-a-house/posttypes.php:277
+msgid "Choose from the most used"
+msgstr "Wybierz z najczęściej używanych"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:193
+msgid "Popular Breakdowns"
+msgstr "Popularne etapy budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:194
+msgid "Search Breakdowns"
+msgstr "Szukaj koków budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:195
+#: vendor/iworks/build-a-house/posttypes.php:280
+msgid "Not Found"
+msgstr "Nie znaleziono"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:196
+#: vendor/iworks/build-a-house/posttypes.php:281
+msgid "No items"
+msgstr "Brak elementów"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:197
+msgid "Breakdowns list"
+msgstr "Lista etapów budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:198
+msgid "Breakdowns list navigation"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:221
+msgid "Detailed data"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:284
+msgid "Date"
+msgstr "Data"
+
+#: vendor/iworks/build-a-house/posttypes.php:268
+msgid "Locations"
+msgstr "Miejsca"
+
+#: vendor/iworks/build-a-house/posttypes.php:269
+msgid "All Locations"
+msgstr "Wszystkie miejsca"
+
+#: vendor/iworks/build-a-house/posttypes.php:270
+msgid "New Locations Name"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:271
+msgid "Add New Locations"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:272
+msgid "Edit Locations"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:273
+msgid "Update Locations"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:274
+msgid "View Locations"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:275
+msgid "Separate Locations with commas"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:276
+msgid "Add or remove Locations"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:278
+msgid "Popular Locations"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:279
+msgid "Search Locations"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:282
+msgid "Locations list"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes.php:283
+msgid "Locations list navigation"
+msgstr ""
+
+#: vendor/iworks/build-a-house.php:81
+msgid "Build a House do not have such post type!"
+msgstr ""
+
+#: vendor/iworks/build-a-house.php:122
+msgid "Are you sure to import breakdowns?"
+msgstr ""
+
+#: vendor/iworks/build-a-house.php:197
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: vendor/iworks/build-a-house.php:199
+msgid "Donate"
+msgstr ""
+
+#: vendor/iworks/options/options.php:237
+msgid "An error occurred while getting the configuration."
+msgstr "Wystąpił błąd w czasie odczytywania konfiguracji."
+
+#: vendor/iworks/options/options.php:734
+msgid "Upload image"
+msgstr "Dodaj obrazek"
+
+#: vendor/iworks/options/options.php:740
+msgid "Delete image"
+msgstr "Skasuj obrazek"
+
+#: vendor/iworks/options/options.php:826
+msgid "Save Changes"
+msgstr "Zapisz zmiany"
+
+#: vendor/iworks/options/options.php:1634
+msgid "ZIP code"
+msgstr "Kod pocztowy"
+
+#: vendor/iworks/options/options.php:1783
+msgid "OFF"
+msgstr "Wyłącz"
+
+#: vendor/iworks/options/options.php:1784
+msgid "ON"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:373
+msgid ""
+"Hey %1$s, you've been using %2$s for a while now, and we hope you're happy "
+"with it."
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:373
+msgid ""
+"We've spent countless hours developing this free plugin for you, and we "
+"would really appreciate it if you dropped us a quick rating!"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:388
+msgid "Thanks :)"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:391
+msgid "Rate %s"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:396
+msgid "Saving"
+msgstr ""
+
+#: vendor/iworks/rate/rate.php:397
+msgid "No thanks"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://iworks.pl/build-a-house/"
+msgstr "http://iworks.pl/build-a-house/"
+
+#. Description of the plugin/theme
+msgid "Build a House allows to log expenses and events during construction."
+msgstr "Zbuduj Dom pozwala na rejestrowanie wydatków i zdarzeń podczas budowy."
+
+#. Author of the plugin/theme
+msgid "Marcin Pietrzak"
+msgstr "Marcin Pietrzak"
+
+#. Author URI of the plugin/theme
+msgid "http://iworks.pl/"
+msgstr "http://iworks.pl/"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:100
+msgctxt "Contractor General Name"
+msgid "Contractors"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-contractor.php:101
+msgctxt "Contractor Singular Name"
+msgid "Contractor"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:62
+msgctxt "Event General Name"
+msgid "Events"
+msgstr "Zdarzenia"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-event.php:63
+msgctxt "Event Singular Name"
+msgid "Event"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:131
+msgctxt "expence General Name"
+msgid "Expences"
+msgstr "Wydatki"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:132
+msgctxt "expence Singular Name"
+msgid "Expence"
+msgstr ""
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:168
+msgctxt "slug for archive"
+msgid "build_a_house_expences"
+msgstr "zbuduj-dom-wydatki"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:181
+msgctxt "Breakdown General Name"
+msgid "Breakdowns"
+msgstr "Etapy budowy"
+
+#: vendor/iworks/build-a-house/posttypes/class-iworks-build-a-house-expence.php:182
+msgctxt "Breakdown Singular Name"
+msgid "Breakdown"
+msgstr "Etap budowy"
+
+#: vendor/iworks/build-a-house/posttypes.php:266
+msgctxt "Taxonomy General Name"
+msgid "Locations"
+msgstr "Miejsca"
+
+#: vendor/iworks/build-a-house/posttypes.php:267
+msgctxt "Taxonomy Singular Name"
+msgid "Locations"
+msgstr "Miejsc"
+
+#~ msgid "Configure block on sidebar."
+#~ msgstr "Konfiguracja bloku w panelu bocznym."
+
+#~ msgid "Last 7 days"
+#~ msgstr "Ostatnie 7 dni"
+
+#~ msgid "This month"
+#~ msgstr "Aktualny miesiąc"
+
+#~ msgid "This year"
+#~ msgstr "Aktualny rok"
+
+#~ msgid "All data"
+#~ msgstr "Wszystkie dane"
+
+#~ msgid "Period:"
+#~ msgstr "Okres:"
+
+#~ msgid "Show expences from selected period."
+#~ msgstr "Pokażwydatkiw wybranego okresu."

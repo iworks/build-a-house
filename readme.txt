@@ -5,7 +5,7 @@ Tags: construction, build, home, house, logger
 Requires at least: 5.0
 Tested up to: 5.7
 Stable tag: PLUGIN_VERSION
-Requires PHP: 7.0
+Requires PHP: 7.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
