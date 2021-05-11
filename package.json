@@ -9,6 +9,7 @@
         "url": "git@github.com:iworks/build-a-house.git"
     },
     "author": "iworks",
+    "keywords": [],
     "contributors": [
         {
             "name": "Marcin Pietrzak",

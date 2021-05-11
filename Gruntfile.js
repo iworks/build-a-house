@@ -57,7 +57,6 @@ module.exports = function(grunt) {
             ],
             include: [
                 '*.php',
-                'vendor/.*',
                 'assets/.*/.*php$',
                 'etc/.*php$',
                 'assets/blocks/*.js',

@@ -40,14 +40,14 @@ if ( ! defined( 'WPINC' ) ) {
  */
 define( 'IWORKS_BUILD_A_HOUSE_VERSION', 'PLUGIN_VERSION' );
 define( 'IWORKS_BUILD_A_HOUSE_PREFIX', 'iworks_build_a_house_' );
-$base   = dirname( __FILE__ );
-$vendor = $base . '/vendor';
+$base     = dirname( __FILE__ );
+$includes = $base . '/includes';
 
 /**
  * require: Iworksbuild-a-house Class
  */
 if ( ! class_exists( 'iworks_build_a_house' ) ) {
-	require_once $vendor . '/iworks/build-a-house.php';
+	require_once $includes . '/iworks/build-a-house.php';
 }
 /**
  * configuration
@@ -57,7 +57,7 @@ require_once $base . '/etc/options.php';
  * require: IworksOptions Class
  */
 if ( ! class_exists( 'iworks_options' ) ) {
-	require_once $vendor . '/iworks/options/options.php';
+	require_once $includes . '/iworks/options/options.php';
 }
 
 /**
@@ -116,7 +116,7 @@ register_deactivation_hook( __FILE__, 'iworks_build_a_house_deactivate' );
 /**
  * Ask for vote
  */
-include_once dirname( __FILE__ ) . '/vendor/iworks/rate/rate.php';
+include_once $includes . '/iworks/rate/rate.php';
 do_action(
 	'iworks-register-plugin',
 	plugin_basename( __FILE__ ),

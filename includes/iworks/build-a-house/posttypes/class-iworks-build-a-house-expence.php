@@ -436,12 +436,6 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 	}
 
 	public function render_callback_block_expences( $atts ) {
-		if ( is_admin() ) {
-			return;
-		}
-		if ( ! is_singular() ) {
-			return;
-		}
 		$attr = wp_parse_args(
 			$atts,
 			array(
