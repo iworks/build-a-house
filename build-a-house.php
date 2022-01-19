@@ -80,6 +80,9 @@ function iworks_build_a_house_get_options_object() {
 	$iworks_build_a_house_options = new iworks_options();
 	$iworks_build_a_house_options->set_option_function_name( 'iworks_build_a_house_options' );
 	$iworks_build_a_house_options->set_option_prefix( IWORKS_BUILD_A_HOUSE_PREFIX );
+	if ( method_exists( $iworks_build_a_house_options, 'set_plugin' ) ) {
+		$iworks_build_a_house_options->set_plugin( basename( __FILE__ ) );
+	}
 	return $iworks_build_a_house_options;
 }
 

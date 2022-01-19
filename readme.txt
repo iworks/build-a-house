@@ -101,8 +101,10 @@ Breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
-= 1.0.3 (2021-xx-xx) =
+= 1.0.3 (2022-01-20) =
 * Added block pattern "Expenses with header".
+* Updated iWorks Options to 2.7.3.
+* Updated iWorks Rate to 2.0.6.
 
 = 1.0.2 (2021-04-29) =
 * Added polish translation into block.
