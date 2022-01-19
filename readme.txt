@@ -103,6 +103,7 @@ Breakdown is a step of building. Typical breakdowns are:
 
 = 1.0.3 (2022-01-20) =
 * Added block pattern "Expenses with header".
+* Renamed directory `vendor` into `includes`.
 * Updated iWorks Options to 2.7.3.
 * Updated iWorks Rate to 2.0.6.
 
