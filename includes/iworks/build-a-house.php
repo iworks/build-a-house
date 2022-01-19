@@ -60,9 +60,11 @@ class iworks_build_a_house extends iworks {
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ), 0 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		/**
-		 * iWorks Rate integration
+		 * iWorks Rate integration - change logo for rate
+		 *
+		 * @since 1.0.4
 		 */
-		add_action( 'iworks_rate_css', array( $this, 'iworks_rate_css' ) );
+		add_filter( 'iworks_rate_notice_logo_style', array( $this, 'filter_plugin_logo' ), 10, 2 );
 	}
 
 
@@ -236,21 +238,9 @@ class iworks_build_a_house extends iworks {
 	}
 
 	/**
-	 * Change logo for "rate" message.
-	 *
-	 * @since 2.6.6
-	 */
-	public function iworks_rate_css() {
-		$logo = plugin_dir_url( dirname( dirname( __FILE__ ) ) ) . 'assets/images/logo.svg';
-		echo '<style type="text/css">';
-		printf( '.iworks-notice-build_a_house .iworks-notice-logo{background-image:url(%s);}', esc_url( $logo ) );
-		echo '</style>';
-	}
-
-	/**
 	 * register styles
 	 *
-	 * @since 1.3.0
+	 * @since 1.0.0
 	 */
 	public function register_assets() {
 		wp_register_style(
@@ -316,6 +306,24 @@ class iworks_build_a_house extends iworks {
 			'build-a-house',
 			array( 'label' => __( 'Build a House', 'build-a-house' ) )
 		);
+	}
+
+	/**
+	 * Plugin logo for rate messages
+	 *
+	 * @since 1.0.4
+	 *
+	 * @param string $logo Logo, can be empty.
+	 * @param object $plugin Plugin basic data.
+	 */
+	public function filter_plugin_logo( $logo, $plugin ) {
+		if ( is_object( $plugin ) ) {
+			$plugin = (array) $plugin;
+		}
+		if ( 'build-a-house' === $plugin['slug'] ) {
+			return plugin_dir_url( dirname( dirname( __FILE__ ) ) ) . '/assets/images/logo.svg';
+		}
+		return $logo;
 	}
 
 }
