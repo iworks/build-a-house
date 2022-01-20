@@ -101,8 +101,9 @@ Breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
-= 1.0.4 (2022-xx-xx) =
+= 1.0.4 (2022-01-21) =
 * Added logo to iWorks Rate Integration.
+* Updated iWorks Options to 2.8.0.
 
 = 1.0.3 (2022-01-20) =
 * Added block pattern "Expenses with header".
