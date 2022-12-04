@@ -387,6 +387,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		if ( $this->post_type_name !== $screen->post_type ) {
 			return;
 		}
+		wp_enqueue_style( 'jquery-ui-datepicker-style', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css' );
 		wp_enqueue_script( $this->options->get_option_name( 'admin' ) );
 		wp_enqueue_style( $this->options->get_option_name( 'admin' ) );
 	}

@@ -3,7 +3,7 @@ Contributors: iworks
 Donate link: http://iworks.pl/donate/build-a-house.php
 Tags: construction, build, home, house, logger
 Requires at least: 5.0
-Tested up to: 5.7
+Tested up to: 6.1
 Stable tag: PLUGIN_VERSION
 Requires PHP: 7.2
 License: GPLv3 or later
@@ -13,16 +13,16 @@ Build a House and document your expenses divided into steps. You can also log im
 
 == Description ==
 
-The plugin allows you to keep logs of expenses during the construction of the house, with the possibility of dividing them into steps, e.g.  obtaining a permit, planning, building foundations, floors, roof, and similar. You can also keep a log of the most important events.
+The plugin allows you to keep logs of expenses during the construction of the house, with the possibility of dividing them into steps, e.g. obtaining a permit, planning, building foundations, floors, roof, and similar. You can also keep a log of the most important events.
 
-Expense summaries available include monthly, date and predefined step expenses.
+Expense summaries available include the monthly, date and predefined step expenses.
 
 == Installation ==
 
 There are 3 ways to install this plugin:
 
-= 1. The super easy way =
-1. In your Admin, go to menu Plugins > Add
+= 1. The super-easy way =
+1. In your Admin, go to the menu Plugins > Add
 1. Search for `Build a House`
 1. Click to install
 1. Activate the plugin
@@ -30,8 +30,8 @@ There are 3 ways to install this plugin:
 
 = 2. The easy way =
 1. Download the plugin (.zip file) on the right column of this page
-1. In your Admin, go to menu Plugins > Add
-1. Select button `Upload Plugin`
+1. In your Admin, go to the menu Plugins > Add
+1. Select the button `Upload Plugin`
 1. Upload the .zip file you just downloaded
 1. Activate the plugin
 1. A new menu `Build a House` will appear in your Admin
@@ -45,7 +45,7 @@ There are 3 ways to install this plugin:
 
 = What is a breakdown? =
 
-Breakdown is a step of building. Typical breakdowns are:
+The breakdown is a step of building. Typical breakdowns are:
 
 * Sale Price Breakdown
 + Finished Lot Cost
@@ -101,18 +101,23 @@ Breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
+= 1.0.5 (2022-12-04) =
+* Added jQuery UI CSS from Google.
+* Updated iWorks Options to 2.8.3.
+* Updated iWorks Rate to 2.1.1.
+
 = 1.0.4 (2022-01-21) =
 * Added logo to iWorks Rate Integration.
 * Updated iWorks Options to 2.8.0.
 
 = 1.0.3 (2022-01-20) =
-* Added block pattern "Expenses with header".
+* Added block pattern "Expenses with the header".
 * Renamed directory `vendor` into `includes`.
 * Updated iWorks Options to 2.7.3.
 * Updated iWorks Rate to 2.0.6.
 
 = 1.0.2 (2021-04-29) =
-* Added polish translation into block.
+* Added Polish translation into the block.
 
 = 1.0.1 (2021-04-28) =
 * Fixed translations.
