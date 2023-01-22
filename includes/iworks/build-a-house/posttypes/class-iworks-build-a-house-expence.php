@@ -242,6 +242,10 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 				if ( empty( $id ) ) {
 					echo '-';
 				} else {
+					$t = get_post_meta( $id, 'iworks_kpir_contractor_data_full_name', true );
+					if ( empty( $t ) ) {
+						$t = get_the_title( $id );
+					}
 					printf(
 						'<a href="%s">%s</a>',
 						add_query_arg(
@@ -251,7 +255,7 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 							),
 							admin_url( 'edit.php' )
 						),
-						get_post_meta( $id, 'iworks_kpir_contractor_data_full_name', true )
+						$t
 					);
 				}
 				break;

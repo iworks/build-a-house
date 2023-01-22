@@ -101,6 +101,10 @@ The breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
+= 1.0.7 (2023-xx-xx) =
+
+* The Contractor field on expenses list has been improved.
+
 = 1.0.6 (2023-01-22) =
 
 * The new param "group by" has been added to the Expenses block.
