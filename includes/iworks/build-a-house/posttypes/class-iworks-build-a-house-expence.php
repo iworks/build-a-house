@@ -440,7 +440,8 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		$attr = wp_parse_args(
 			$atts,
 			array(
-				'kind' => 'all',
+				'kind'     => 'all',
+				'group_by' => 'no',
 			)
 		);
 		$args = array(
@@ -487,27 +488,78 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		ob_start();
 		$the_query = new WP_Query( $args );
 		if ( $the_query->have_posts() ) {
-			$this->load_template( 'build-a-house/block/expences', 'table-header' );
-			$i           = 1;
-			$sum         = 0;
-			$date_format = get_option( 'date_format' );
-			while ( $the_query->have_posts() ) {
-				$the_query->the_post();
-				$data = array(
-					'i'          => $i++,
-					'cost'       => intval( get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_cost' ), true ) ),
-					'date_start' => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_start' ), true ) ),
-					'date_end'   => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_end' ), true ) ),
-				);
-				$sum += $data['cost'];
-				$this->load_template( 'build-a-house/block/expences', 'table-body-row', $data );
+			if ( 'contractor' === $attr['group_by'] ) {
+				$this->group_by_contractor( $the_query );
+			} else {
+				$this->load_template( 'build-a-house/block/expences', 'table-header' );
+				$i           = 1;
+				$sum         = 0;
+				$date_format = get_option( 'date_format' );
+				while ( $the_query->have_posts() ) {
+					$the_query->the_post();
+					$data = array(
+						'i'          => $i++,
+						'cost'       => intval( get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_cost' ), true ) ),
+						'date_start' => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_start' ), true ) ),
+						'date_end'   => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_end' ), true ) ),
+					);
+					$sum += $data['cost'];
+					$this->load_template( 'build-a-house/block/expences', 'table-body-row', $data );
+				}
+				$this->load_template( 'build-a-house/block/expences', 'table-footer', array( 'sum' => $sum ) );
 			}
-			$this->load_template( 'build-a-house/block/expences', 'table-footer', array( 'sum' => $sum ) );
 		}
 		wp_reset_postdata();
 		$content = ob_get_contents();
 		ob_end_clean();
 		return $content;
+	}
+
+	private function group_by_contractor( $the_query ) {
+		$date_format = get_option( 'date_format' );
+		$entries     = array();
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			$contractor = get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_contractor' ), true );
+			if ( empty( $contractor ) ) {
+				$contractor = 'empty';
+			}
+			if ( ! isset( $entries[ $contractor ] ) ) {
+				$entries[ $contractor ] = array(
+					'ID'       => $contractor,
+					'title'    => get_the_title( $contractor ),
+					'children' => array(),
+					'sum'      => 0,
+				);
+			}
+			$cost                                 = intval( get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_cost' ), true ) );
+			$entries[ $contractor ]['children'][] = array(
+				'ID'         => get_the_ID(),
+				'title'      => get_the_title(),
+				'cost'       => $cost,
+				'date_start' => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_start' ), true ) ),
+				'date_end'   => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_end' ), true ) ),
+			);
+			$entries[ $contractor ]['sum']       += $cost;
+		}
+		uasort( $entries, array( $this, 'sort_by_title' ) );
+		$i    = 1;
+		$root = 'build-a-house/block/expences-section';
+		foreach ( $entries as $contractor_id => $contractor_data ) {
+			$this->load_template( $root, 'table-header', $contractor_data );
+			foreach ( $contractor_data['children'] as $data ) {
+				$data['i'] = $i++;
+				$this->load_template( $root, 'table-body-row', $data );
+			}
+			$this->load_template( $root, 'table-footer', $contractor_data );
+		}
+	}
+
+	private function sort_by_title( $a, $b ) {
+		if ( $a['title'] === $b['title'] ) {
+			return 0;
+		}
+		return $a['title'] > $b['title'] ? 1 : -1;
 	}
 
 	private function import_breakdown( $value, $data, $parent_ID ) {

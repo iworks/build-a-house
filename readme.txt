@@ -101,12 +101,18 @@ The breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
+= 1.0.6 (2023-01-22) =
+
+* The new param "group by" has been added to the Expenses block.
+
 = 1.0.5 (2022-12-04) =
+
 * Added jQuery UI CSS from Google.
 * Updated iWorks Options to 2.8.3.
 * Updated iWorks Rate to 2.1.1.
 
 = 1.0.4 (2022-01-21) =
+
 * Added logo to iWorks Rate Integration.
 * Updated iWorks Options to 2.8.0.
 

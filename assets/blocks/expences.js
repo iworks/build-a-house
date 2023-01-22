@@ -35,6 +35,10 @@
                 type: 'string',
                 default: 'all',
             },
+            group_by: {
+                type: 'string',
+                default: 'no',
+            },
         },
         edit: (props) => {
             return el(
@@ -45,8 +49,9 @@
                             title: __('Expences Settings', 'build-a-house'),
                             initialOpen: true
                         },
-
-                        /* Text Field */
+                        /**
+                         * period
+                         */
                         el(
                             PanelRow, {},
                             el(
@@ -71,6 +76,33 @@
                                         label: __('Last 7 days', 'build-a-house')
                                     }, ],
                                     value: props.attributes.kind
+                                }
+                            )
+                        ),
+                        /**
+                         * group
+                         */
+                        el(
+                            PanelRow, {},
+                            el(
+                                SelectControl, {
+                                    label: __('Group by:', 'build-a-house'),
+                                    onChange: (value) => {
+                                        props.setAttributes({
+                                            group_by: value
+                                        });
+                                    },
+                                    options: [{
+                                        value: 'no',
+                                        label: __('No grup', 'build-a-house')
+                                    }, {
+                                        value: 'contractor',
+                                        label: __('Contractor', 'build-a-house')
+                                    }, {
+                                        value: 'month',
+                                        label: __('Month', 'build-a-house')
+                                    }, ],
+                                    value: props.attributes.group_by
                                 }
                             )
                         ),
