@@ -99,8 +99,8 @@
                                         value: 'contractor',
                                         label: __('Contractor', 'build-a-house')
                                     }, {
-                                        value: 'month',
-                                        label: __('Month', 'build-a-house')
+                                        value: 'breakdown',
+                                        label: __('Breakdown', 'build-a-house')
                                     }, ],
                                     value: props.attributes.group_by
                                 }

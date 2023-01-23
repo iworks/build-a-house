@@ -494,6 +494,8 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		if ( $the_query->have_posts() ) {
 			if ( 'contractor' === $attr['group_by'] ) {
 				$this->group_by_contractor( $the_query );
+			} elseif ( 'breakdown' === $attr['group_by'] ) {
+				$this->group_by_breakdown( $the_query );
 			} else {
 				$this->load_template( 'build-a-house/block/expences', 'table-header' );
 				$i           = 1;
@@ -517,6 +519,52 @@ class iworks_build_a_house_posttypes_expence extends iworks_build_a_house_postty
 		$content = ob_get_contents();
 		ob_end_clean();
 		return $content;
+
+	}
+
+	private function group_by_breakdown( $the_query ) {
+		$date_format = get_option( 'date_format' );
+		$entries     = array();
+		/**
+		 * get breakdowns
+		 */
+		foreach ( get_terms( $this->taxonomy_name_breakdown ) as $term ) {
+			$entries[ $term->term_id ] = array(
+				'ID'       => $term->term_id,
+				'title'    => $term->name,
+				'term'     => $term,
+				'children' => array(),
+				'sum'      => 0,
+			);
+		}
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+
+			$cost  = intval( get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_cost' ), true ) );
+			$one   = array(
+				'ID'         => get_the_ID(),
+				'title'      => get_the_title(),
+				'cost'       => $cost,
+				'date_start' => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_start' ), true ) ),
+				'date_end'   => date_i18n( $date_format, get_post_meta( get_the_ID(), $this->options->get_option_name( 'details_date_end' ), true ) ),
+			);
+			$terms = wp_get_post_terms( get_the_ID(), $this->taxonomy_name_breakdown );
+			foreach ( $terms as $term ) {
+				$entries[ $term->term_id ]['children'][] = $one;
+				$entries[ $term->term_id ]['sum']       += $cost;
+			}
+		}
+		uasort( $entries, array( $this, 'sort_by_title' ) );
+		$i    = 1;
+		$root = 'build-a-house/block/expences-breakdown-table';
+		foreach ( $entries as $term_id => $term_data ) {
+			$this->load_template( $root, 'header', $term_data );
+			foreach ( $term_data['children'] as $data ) {
+				$data['i'] = $i++;
+				$this->load_template( $root, 'body-row', $data );
+			}
+			$this->load_template( $root, 'footer', $term_data );
+		}
 	}
 
 	private function group_by_contractor( $the_query ) {

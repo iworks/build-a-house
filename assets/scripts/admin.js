@@ -1,4 +1,4 @@
-/*! Build a Houser - v1.0.6
+/*! Build a Houser - v1.0.7
  * https://iworks.pl/
  * Copyright (c) 2023; * Licensed GPLv2+
  */
