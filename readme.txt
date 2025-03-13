@@ -3,7 +3,7 @@ Contributors: iworks
 Donate link: http://iworks.pl/donate/build-a-house.php
 Tags: construction, build, home, house, logger
 Requires at least: 5.0
-Tested up to: 6.1
+Tested up to: 6.7
 Stable tag: PLUGIN_VERSION
 Requires PHP: 7.2
 License: GPLv3 or later
@@ -101,8 +101,11 @@ The breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
-= 1.0.7 (2023-01-2333 =
+= 1.0.8 (2025-03-13) =
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 2.9.8.
+* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to version 2.2.3.
 
+= 1.0.7 (2023-01-23) =
 * The Contractor field on expenses list has been improved.
 * The new option "breakdown" has been added to the Expenses block to param "group by".
 
