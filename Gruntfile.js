@@ -329,6 +329,7 @@ module.exports = function(grunt) {
                     '!assets/sass/*',
                     '!assets/sass/**',
                     '!phpcs.xml.dist',
+                    '!LICENSE',
                     '!README.md',
                     '!composer.json',
                     '!composer.lock',
