@@ -8,8 +8,8 @@
  * Version:           PLUGIN_VERSION
  * Author:            Marcin Pietrzak
  * Author URI:        http://iworks.pl/
- * License:           GPLv2 or later
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+ * License:           GPLv3 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       build-a-house
  * Domain Path:       /languages
  *
@@ -59,11 +59,6 @@ require_once $base . '/etc/options.php';
 if ( ! class_exists( 'iworks_options' ) ) {
 	require_once $includes . '/iworks/options/options.php';
 }
-
-/**
- * i18n
- */
-load_plugin_textdomain( 'build-a-house', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
 
 /**
  * load options

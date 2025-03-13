@@ -2,7 +2,7 @@
     "name": "build-a-house",
     "title": "Build a Houser",
     "homepage": "https://iworks.pl/",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Log your expensens during a house contruction.",
     "repository": {
         "type": "git",
