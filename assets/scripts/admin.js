@@ -1,6 +1,6 @@
-/*! Build a Houser - v1.0.7
+/*! Build a Houser - v1.0.8
  * https://iworks.pl/
- * Copyright (c) 2023; * Licensed GPLv2+
+ * Copyright (c) 2025; * Licensed GPLv2+
  */
 jQuery( document ).ready(function($) {
     $( function() {
