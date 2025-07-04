@@ -108,13 +108,13 @@ The breakdown is a step of building. Typical breakdowns are:
 == Changelog ==
 
 = 1.0.9 (2025-07-04) =
-* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the latest version.
-* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to the latest version.
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the version 3.0.7.
+* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to the version 2.3.1.
 * General code improvements and bug fixes.
 
 = 1.0.8 (2025-03-13) =
-* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 2.9.8.
-* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to version 2.2.3.
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the version 2.9.8.
+* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to the version 2.2.3.
 
 = 1.0.7 (2023-01-23) =
 * The Contractor field on expenses list has been improved.
@@ -127,19 +127,19 @@ The breakdown is a step of building. Typical breakdowns are:
 = 1.0.5 (2022-12-04) =
 
 * Added jQuery UI CSS from Google.
-* Updated iWorks Options to 2.8.3.
-* Updated iWorks Rate to 2.1.1.
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the version 2.8.3.
+* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to the version 2.1.1.
 
 = 1.0.4 (2022-01-21) =
 
 * Added logo to iWorks Rate Integration.
-* Updated iWorks Options to 2.8.0.
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the version 2.8.0.
 
 = 1.0.3 (2022-01-20) =
 * Added block pattern "Expenses with the header".
 * Renamed directory `vendor` into `includes`.
-* Updated iWorks Options to 2.7.3.
-* Updated iWorks Rate to 2.0.6.
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the version 2.7.3.
+* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to the version 2.0.6.
 
 = 1.0.2 (2021-04-29) =
 * Added Polish translation into the block.
@@ -150,7 +150,7 @@ The breakdown is a step of building. Typical breakdowns are:
 
 = 1.0.0 (2021-04-28) =
 * Added block `build-a-house/expences` to editor.
-* Updated iWorks Options to 2.6.9
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the version 2.6.9.
 * Added ability to import breakdowns.
 
 * First release.
