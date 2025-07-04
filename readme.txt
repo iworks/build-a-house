@@ -2,10 +2,10 @@
 Contributors: iworks
 Donate link: http://iworks.pl/donate/build-a-house.php
 Tags: PLUGIN_TAGS
-Requires at least: REQUIRED_WORDPRESS_VERSION
-Tested up to: TESTED_WORDPRESS_VERSION
+Requires at least: PLUGIN_REQUIRES_WORDPRESS
+Tested up to: PLUGIN_TESTED_WORDPRESS
 Stable tag: PLUGIN_VERSION
-Requires PHP: REQUIRED_PHP_VERSION
+Requires PHP: PLUGIN_REQUIRES_PHP
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 

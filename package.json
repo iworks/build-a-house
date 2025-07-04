@@ -1,8 +1,8 @@
 {
     "name": "build-a-house",
     "title": "Build a Houser",
-    "description": "Easily track and manage your house construction expenses step-by-step, from permits to finishing touches, all within your WordPress dashboard.",
-    "tagline": "",
+    "description": "",
+    "tagline": "Easily track and manage your house construction expenses step-by-step, from permits to finishing touches, all within your WordPress dashboard.",
     "version": "1.0.9",
     "homepage": "https://github.com/iworks/build-a-house",
     "tags": [

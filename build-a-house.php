@@ -2,12 +2,12 @@
 /*
  * Plugin Name:       Build a House
  * Plugin URI:        http://iworks.pl/build-a-house/
- * Description:       Build a House allows to log expenses and events during construction.
- * Requires at least: 5.0
- * Requires PHP:      7.2
+ * Description:       PLUGIN_DESCRIPTION
+ * Requires at least: PLUGIN_REQUIRES_WORDPRESS
+ * Requires PHP:      PLUGIN_REQUIRES_PHP
  * Version:           PLUGIN_VERSION
- * Author:            Marcin Pietrzak
- * Author URI:        http://iworks.pl/
+ * Author:            AUTHOR_NAME
+ * Author URI:        AUTHOR_URI
  * License:           GPLv3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       build-a-house
