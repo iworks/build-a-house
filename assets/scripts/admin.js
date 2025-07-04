@@ -1,5 +1,5 @@
-/*! Build a Houser - v1.0.8
- * https://iworks.pl/
+/*! Build a Houser - v1.0.9
+ * https://github.com/iworks/build-a-house
  * Copyright (c) 2025; * Licensed GPLv2+
  */
 jQuery( document ).ready(function($) {

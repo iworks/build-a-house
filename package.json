@@ -1,51 +1,61 @@
 {
     "name": "build-a-house",
     "title": "Build a Houser",
-    "homepage": "https://iworks.pl/",
-    "version": "1.0.8",
-    "description": "Log your expensens during a house contruction.",
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:iworks/build-a-house.git"
-    },
-    "author": "iworks",
-    "keywords": [],
-    "contributors": [
+    "description": "Easily track and manage your house construction expenses step-by-step, from permits to finishing touches, all within your WordPress dashboard.",
+    "tagline": "",
+    "version": "1.0.9",
+    "homepage": "https://github.com/iworks/build-a-house",
+    "tags": [
+        "construction",
+        "expenses",
+        "project management",
+        "building",
+        "budgeting"
+    ],
+    "author": [
         {
             "name": "Marcin Pietrzak",
-            "email": "marcin@iworks.pl"
+            "email": "marcin@iworks.pl",
+            "uri": "http://iworks.pl/"
         }
     ],
-    "license": "GPL-2.0",
-    "devDependencies": {
-        "grunt": ">1.0.0",
-        "grunt-autoprefixer": ">3.0.0",
-        "grunt-clear": "~0.2.1",
-        "grunt-concat-css": "^0.3.1",
-        "grunt-contrib-clean": "^1.1.0",
-        "grunt-contrib-compass": "^1.1.1",
-        "grunt-contrib-compress": "^1.4.3",
-        "grunt-contrib-concat": ">1.0.0",
-        "grunt-contrib-copy": "^1.0.0",
-        "grunt-contrib-cssmin": "^2.2.1",
-        "grunt-contrib-jshint": ">1.0.0",
-        "grunt-contrib-nodeunit": "^2.0.0",
-        "grunt-contrib-sass": "^1.0.0",
-        "grunt-contrib-uglify": "^2.0.0",
-        "grunt-contrib-watch": "^1.1.0",
-        "grunt-exec": "^0.4.6",
-        "grunt-git": ">1.0.0",
-        "grunt-jsvalidate": "^0.2.2",
-        "grunt-phpcs": "^0.4.0",
-        "grunt-phplint": "^0.1.0",
-        "grunt-phpunit": "^0.3.5",
-        "grunt-po2mo": "~0.1.2",
-        "grunt-replace": "^1.0.1",
-        "grunt-wp-i18n": "^1.0.3",
-        "load-grunt-tasks": "^4.0.0",
-        "time-grunt": "^0.2.3"
+    "translator": {
+        "name": "Marcin Pietrzak",
+        "email": "marcin@iworks.pl"
     },
-    "dependencies": {
-        "node-wp-i18n": "^1.2.5"
-    }
+    "requires": {
+        "WordPress": "6.0",
+        "PHP": "8.0"
+    },
+    "tested": {
+        "WordPress": "6.8"
+    },
+    "devDependencies": {
+        "grunt": "^1",
+        "load-grunt-tasks": "^0",
+        "grunt-checktextdomain": "^1",
+        "grunt-contrib-clean": "^1",
+        "grunt-contrib-compass": "^1",
+        "grunt-contrib-compress": "^1",
+        "grunt-contrib-concat": "^1",
+        "grunt-contrib-copy": "^1",
+        "grunt-contrib-cssmin": "^2",
+        "grunt-contrib-jshint": "^1",
+        "grunt-contrib-nodeunit": "^1",
+        "grunt-contrib-sass": "^1",
+        "grunt-contrib-uglify": "^1",
+        "grunt-contrib-watch": "^1",
+        "grunt-concat-css": "^0",
+        "grunt-phpunit": "^0",
+        "grunt-potomo": "^3",
+        "grunt-replace": "^1",
+        "grunt-wp-i18n": "^1"
+    },
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:iworks/build-a-house.git",
+        "website": "https://github.com/iworks/build-a-house"
+    },
+    "license": "GPL-3.0"
 }
