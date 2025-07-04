@@ -1,21 +1,27 @@
 === Build a House ===
 Contributors: iworks
 Donate link: http://iworks.pl/donate/build-a-house.php
-Tags: construction, build, home, house, logger
-Requires at least: 5.0
-Tested up to: 6.7
+Tags: PLUGIN_TAGS
+Requires at least: REQUIRED_WORDPRESS_VERSION
+Tested up to: TESTED_WORDPRESS_VERSION
 Stable tag: PLUGIN_VERSION
-Requires PHP: 7.2
+Requires PHP: REQUIRED_PHP_VERSION
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Build a House and document your expenses divided into steps. You can also log important events.
+PLUGIN_TAGLINE
 
 == Description ==
 
-The plugin allows you to keep logs of expenses during the construction of the house, with the possibility of dividing them into steps, e.g. obtaining a permit, planning, building foundations, floors, roof, and similar. You can also keep a log of the most important events.
+**Build a House** is a comprehensive WordPress plugin designed to help you track and manage expenses throughout the construction of a house. Easily log costs, categorize them by project steps (such as permits, planning, foundations, roofing, etc.), and keep a record of key events. The plugin provides detailed expense summaries by month, date, or custom project step, giving you full control and transparency over your building budget.
 
-Expense summaries available include the monthly, date and predefined step expenses.
+= Key Features =
+
+* Log and categorize construction expenses
+* Break down costs by project phase (e.g., permits, foundations, roofing)
+* Track important construction events
+* View expense summaries by month, date, or step
+* Simple and intuitive interface
 
 == Installation ==
 
@@ -100,6 +106,11 @@ The breakdown is a step of building. Typical breakdowns are:
 == Screenshots ==
 
 == Changelog ==
+
+= 1.0.9 (2025-07-04) =
+* Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the latest version.
+* Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to the latest version.
+* General code improvements and bug fixes.
 
 = 1.0.8 (2025-03-13) =
 * Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 2.9.8.
