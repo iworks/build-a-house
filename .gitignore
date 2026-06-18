@@ -1,5 +1,23 @@
-node_modules
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+
+# Node artifact files
+node_modules/
+dist/
+
+# Compiled files
 .sass-cache
 package-lock.json
-release
-languages/*~
+
+# Compiled CSS files, needed to release not in repository
+assets/styles/*.css
+assets/scripts/*.js
+
+# release
+release/
+
+# i18n
+languages/*.mo
+
+# tests
+tests/php/.phpunit.result.cache

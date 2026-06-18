@@ -3,7 +3,7 @@
     "title": "Build a Houser",
     "description": "",
     "tagline": "Easily track and manage your house construction expenses step-by-step, from permits to finishing touches, all within your WordPress dashboard.",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "homepage": "https://github.com/iworks/build-a-house",
     "tags": [
         "construction",
@@ -28,7 +28,7 @@
         "PHP": "8.0"
     },
     "tested": {
-        "WordPress": "6.8"
+        "WordPress": "7.0"
     },
     "devDependencies": {
         "grunt": "^1",
