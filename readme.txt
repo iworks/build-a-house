@@ -107,6 +107,9 @@ The breakdown is a step of building. Typical breakdowns are:
 
 == Changelog ==
 
+= 1.1.0 - 2026-06-18 =
+* **Dependencies**: Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to version 3.1.0 and the [iWorks Rate](https://github.com/iworks/iworks-rate) module to version 2.3.2.
+
 = 1.0.9 (2025-07-04) =
 * Updated the [iWorks Options](https://github.com/iworks/wordpress-options-class) module to the version 3.0.7.
 * Updated the [iWorks Rate](https://github.com/iworks/iworks-rate) module to the version 2.3.1.
